@@ -1,0 +1,2636 @@
+[
+   {
+      "name": {
+         "english": "Bulbasaur"
+      },
+      "level": 73,
+      "type": [
+         "Grass",
+         "Poison"
+      ],
+      "base": {
+         "HP": 47,
+         "Attack": 74,
+         "Defense": 67,
+         "Sp. Attack": 72,
+         "Sp. Defense": 98,
+         "Speed": 48
+      }
+   },
+   {
+      "name": {
+         "english": "Ivysaur"
+      },
+      "level": 62,
+      "type": [
+         "Grass",
+         "Poison"
+      ],
+      "base": {
+         "HP": 98,
+         "Attack": 41,
+         "Defense": 91,
+         "Sp. Attack": 85,
+         "Sp. Defense": 42,
+         "Speed": 62
+      }
+   },
+   {
+      "name": {
+         "english": "Venusaur"
+      },
+      "level": 19,
+      "type": [
+         "Grass",
+         "Poison"
+      ],
+      "base": {
+         "HP": 78,
+         "Attack": 105,
+         "Defense": 62,
+         "Sp. Attack": 89,
+         "Sp. Defense": 64,
+         "Speed": 90
+      }
+   },
+   {
+      "name": {
+         "english": "Charmander"
+      },
+      "level": 56,
+      "type": [
+         "Fire"
+      ],
+      "base": {
+         "HP": 61,
+         "Attack": 71,
+         "Defense": 59,
+         "Sp. Attack": 41,
+         "Sp. Defense": 60,
+         "Speed": 63
+      }
+   },
+   {
+      "name": {
+         "english": "Charmeleon"
+      },
+      "level": 59,
+      "type": [
+         "Fire"
+      ],
+      "base": {
+         "HP": 109,
+         "Attack": 53,
+         "Defense": 45,
+         "Sp. Attack": 70,
+         "Sp. Defense": 90,
+         "Speed": 80
+      }
+   },
+   {
+      "name": {
+         "english": "Charizard"
+      },
+      "level": 18,
+      "type": [
+         "Fire",
+         "Flying"
+      ],
+      "base": {
+         "HP": 118,
+         "Attack": 114,
+         "Defense": 50,
+         "Sp. Attack": 86,
+         "Sp. Defense": 48,
+         "Speed": 48
+      }
+   },
+   {
+      "name": {
+         "english": "Squirtle"
+      },
+      "level": 47,
+      "type": [
+         "Water"
+      ],
+      "base": {
+         "HP": 80,
+         "Attack": 87,
+         "Defense": 97,
+         "Sp. Attack": 102,
+         "Sp. Defense": 103,
+         "Speed": 63
+      }
+   },
+   {
+      "name": {
+         "english": "Wartortle"
+      },
+      "level": 31,
+      "type": [
+         "Water"
+      ],
+      "base": {
+         "HP": 84,
+         "Attack": 47,
+         "Defense": 54,
+         "Sp. Attack": 42,
+         "Sp. Defense": 41,
+         "Speed": 57
+      }
+   },
+   {
+      "name": {
+         "english": "Blastoise"
+      },
+      "level": 76,
+      "type": [
+         "Water"
+      ],
+      "base": {
+         "HP": 79,
+         "Attack": 82,
+         "Defense": 48,
+         "Sp. Attack": 93,
+         "Sp. Defense": 64,
+         "Speed": 97
+      }
+   },
+   {
+      "name": {
+         "english": "Caterpie"
+      },
+      "level": 35,
+      "type": [
+         "Bug"
+      ],
+      "base": {
+         "HP": 48,
+         "Attack": 65,
+         "Defense": 71,
+         "Sp. Attack": 46,
+         "Sp. Defense": 96,
+         "Speed": 94
+      }
+   },
+   {
+      "name": {
+         "english": "Metapod"
+      },
+      "level": 80,
+      "type": [
+         "Bug"
+      ],
+      "base": {
+         "HP": 45,
+         "Attack": 76,
+         "Defense": 111,
+         "Sp. Attack": 99,
+         "Sp. Defense": 79,
+         "Speed": 118
+      }
+   },
+   {
+      "name": {
+         "english": "Butterfree"
+      },
+      "level": 43,
+      "type": [
+         "Bug",
+         "Flying"
+      ],
+      "base": {
+         "HP": 90,
+         "Attack": 78,
+         "Defense": 75,
+         "Sp. Attack": 110,
+         "Sp. Defense": 63,
+         "Speed": 62
+      }
+   },
+   {
+      "name": {
+         "english": "Weedle"
+      },
+      "level": 20,
+      "type": [
+         "Bug",
+         "Poison"
+      ],
+      "base": {
+         "HP": 85,
+         "Attack": 100,
+         "Defense": 102,
+         "Sp. Attack": 74,
+         "Sp. Defense": 100,
+         "Speed": 66
+      }
+   },
+   {
+      "name": {
+         "english": "Kakuna"
+      },
+      "level": 35,
+      "type": [
+         "Bug",
+         "Poison"
+      ],
+      "base": {
+         "HP": 77,
+         "Attack": 67,
+         "Defense": 50,
+         "Sp. Attack": 44,
+         "Sp. Defense": 98,
+         "Speed": 113
+      }
+   },
+   {
+      "name": {
+         "english": "Beedrill"
+      },
+      "level": 64,
+      "type": [
+         "Bug",
+         "Poison"
+      ],
+      "base": {
+         "HP": 106,
+         "Attack": 54,
+         "Defense": 103,
+         "Sp. Attack": 90,
+         "Sp. Defense": 52,
+         "Speed": 64
+      }
+   },
+   {
+      "name": {
+         "english": "Pidgey"
+      },
+      "level": 21,
+      "type": [
+         "Normal",
+         "Flying"
+      ],
+      "base": {
+         "HP": 62,
+         "Attack": 91,
+         "Defense": 109,
+         "Sp. Attack": 96,
+         "Sp. Defense": 104,
+         "Speed": 80
+      }
+   },
+   {
+      "name": {
+         "english": "Pidgeotto"
+      },
+      "level": 39,
+      "type": [
+         "Normal",
+         "Flying"
+      ],
+      "base": {
+         "HP": 44,
+         "Attack": 41,
+         "Defense": 43,
+         "Sp. Attack": 51,
+         "Sp. Defense": 78,
+         "Speed": 119
+      }
+   },
+   {
+      "name": {
+         "english": "Pidgeot"
+      },
+      "level": 17,
+      "type": [
+         "Normal",
+         "Flying"
+      ],
+      "base": {
+         "HP": 82,
+         "Attack": 93,
+         "Defense": 102,
+         "Sp. Attack": 118,
+         "Sp. Defense": 91,
+         "Speed": 61
+      }
+   },
+   {
+      "name": {
+         "english": "Rattata"
+      },
+      "level": 46,
+      "type": [
+         "Normal"
+      ],
+      "base": {
+         "HP": 86,
+         "Attack": 51,
+         "Defense": 110,
+         "Sp. Attack": 105,
+         "Sp. Defense": 68,
+         "Speed": 77
+      }
+   },
+   {
+      "name": {
+         "english": "Raticate"
+      },
+      "level": 62,
+      "type": [
+         "Normal"
+      ],
+      "base": {
+         "HP": 87,
+         "Attack": 78,
+         "Defense": 109,
+         "Sp. Attack": 120,
+         "Sp. Defense": 106,
+         "Speed": 59
+      }
+   },
+   {
+      "name": {
+         "english": "Spearow"
+      },
+      "level": 67,
+      "type": [
+         "Normal",
+         "Flying"
+      ],
+      "base": {
+         "HP": 41,
+         "Attack": 46,
+         "Defense": 111,
+         "Sp. Attack": 41,
+         "Sp. Defense": 81,
+         "Speed": 70
+      }
+   },
+   {
+      "name": {
+         "english": "Fearow"
+      },
+      "level": 30,
+      "type": [
+         "Normal",
+         "Flying"
+      ],
+      "base": {
+         "HP": 70,
+         "Attack": 75,
+         "Defense": 42,
+         "Sp. Attack": 79,
+         "Sp. Defense": 66,
+         "Speed": 61
+      }
+   },
+   {
+      "name": {
+         "english": "Ekans"
+      },
+      "level": 25,
+      "type": [
+         "Poison"
+      ],
+      "base": {
+         "HP": 117,
+         "Attack": 61,
+         "Defense": 112,
+         "Sp. Attack": 79,
+         "Sp. Defense": 105,
+         "Speed": 107
+      }
+   },
+   {
+      "name": {
+         "english": "Arbok"
+      },
+      "level": 75,
+      "type": [
+         "Poison"
+      ],
+      "base": {
+         "HP": 104,
+         "Attack": 108,
+         "Defense": 45,
+         "Sp. Attack": 41,
+         "Sp. Defense": 51,
+         "Speed": 104
+      }
+   },
+   {
+      "name": {
+         "english": "Pikachu"
+      },
+      "level": 62,
+      "type": [
+         "Electric"
+      ],
+      "base": {
+         "HP": 93,
+         "Attack": 71,
+         "Defense": 59,
+         "Sp. Attack": 67,
+         "Sp. Defense": 92,
+         "Speed": 87
+      }
+   },
+   {
+      "name": {
+         "english": "Raichu"
+      },
+      "level": 78,
+      "type": [
+         "Electric"
+      ],
+      "base": {
+         "HP": 66,
+         "Attack": 79,
+         "Defense": 102,
+         "Sp. Attack": 60,
+         "Sp. Defense": 110,
+         "Speed": 75
+      }
+   },
+   {
+      "name": {
+         "english": "Sandshrew"
+      },
+      "level": 54,
+      "type": [
+         "Ground"
+      ],
+      "base": {
+         "HP": 62,
+         "Attack": 63,
+         "Defense": 41,
+         "Sp. Attack": 69,
+         "Sp. Defense": 67,
+         "Speed": 62
+      }
+   },
+   {
+      "name": {
+         "english": "Sandslash"
+      },
+      "level": 17,
+      "type": [
+         "Ground"
+      ],
+      "base": {
+         "HP": 89,
+         "Attack": 67,
+         "Defense": 80,
+         "Sp. Attack": 93,
+         "Sp. Defense": 66,
+         "Speed": 106
+      }
+   },
+   {
+      "name": {
+         "english": "Nidoran\u2640"
+      },
+      "level": 46,
+      "type": [
+         "Poison"
+      ],
+      "base": {
+         "HP": 103,
+         "Attack": 95,
+         "Defense": 88,
+         "Sp. Attack": 45,
+         "Sp. Defense": 119,
+         "Speed": 70
+      }
+   },
+   {
+      "name": {
+         "english": "Nidorina"
+      },
+      "level": 15,
+      "type": [
+         "Poison"
+      ],
+      "base": {
+         "HP": 48,
+         "Attack": 54,
+         "Defense": 105,
+         "Sp. Attack": 48,
+         "Sp. Defense": 47,
+         "Speed": 69
+      }
+   },
+   {
+      "name": {
+         "english": "Nidoqueen"
+      },
+      "level": 53,
+      "type": [
+         "Poison",
+         "Ground"
+      ],
+      "base": {
+         "HP": 107,
+         "Attack": 86,
+         "Defense": 65,
+         "Sp. Attack": 40,
+         "Sp. Defense": 63,
+         "Speed": 64
+      }
+   },
+   {
+      "name": {
+         "english": "Nidoran\u2642"
+      },
+      "level": 75,
+      "type": [
+         "Poison"
+      ],
+      "base": {
+         "HP": 61,
+         "Attack": 57,
+         "Defense": 72,
+         "Sp. Attack": 52,
+         "Sp. Defense": 113,
+         "Speed": 116
+      }
+   },
+   {
+      "name": {
+         "english": "Nidorino"
+      },
+      "level": 43,
+      "type": [
+         "Poison"
+      ],
+      "base": {
+         "HP": 90,
+         "Attack": 77,
+         "Defense": 58,
+         "Sp. Attack": 88,
+         "Sp. Defense": 102,
+         "Speed": 48
+      }
+   },
+   {
+      "name": {
+         "english": "Nidoking"
+      },
+      "level": 12,
+      "type": [
+         "Poison",
+         "Ground"
+      ],
+      "base": {
+         "HP": 98,
+         "Attack": 83,
+         "Defense": 59,
+         "Sp. Attack": 87,
+         "Sp. Defense": 40,
+         "Speed": 90
+      }
+   },
+   {
+      "name": {
+         "english": "Clefairy"
+      },
+      "level": 80,
+      "type": [
+         "Fairy"
+      ],
+      "base": {
+         "HP": 70,
+         "Attack": 118,
+         "Defense": 68,
+         "Sp. Attack": 62,
+         "Sp. Defense": 65,
+         "Speed": 101
+      }
+   },
+   {
+      "name": {
+         "english": "Clefable"
+      },
+      "level": 20,
+      "type": [
+         "Fairy"
+      ],
+      "base": {
+         "HP": 40,
+         "Attack": 48,
+         "Defense": 107,
+         "Sp. Attack": 67,
+         "Sp. Defense": 72,
+         "Speed": 60
+      }
+   },
+   {
+      "name": {
+         "english": "Vulpix"
+      },
+      "level": 21,
+      "type": [
+         "Fire"
+      ],
+      "base": {
+         "HP": 49,
+         "Attack": 75,
+         "Defense": 78,
+         "Sp. Attack": 100,
+         "Sp. Defense": 66,
+         "Speed": 112
+      }
+   },
+   {
+      "name": {
+         "english": "Ninetales"
+      },
+      "level": 72,
+      "type": [
+         "Fire"
+      ],
+      "base": {
+         "HP": 75,
+         "Attack": 80,
+         "Defense": 74,
+         "Sp. Attack": 117,
+         "Sp. Defense": 108,
+         "Speed": 49
+      }
+   },
+   {
+      "name": {
+         "english": "Jigglypuff"
+      },
+      "level": 68,
+      "type": [
+         "Normal",
+         "Fairy"
+      ],
+      "base": {
+         "HP": 78,
+         "Attack": 90,
+         "Defense": 49,
+         "Sp. Attack": 112,
+         "Sp. Defense": 100,
+         "Speed": 59
+      }
+   },
+   {
+      "name": {
+         "english": "Wigglytuff"
+      },
+      "level": 41,
+      "type": [
+         "Normal",
+         "Fairy"
+      ],
+      "base": {
+         "HP": 81,
+         "Attack": 95,
+         "Defense": 108,
+         "Sp. Attack": 112,
+         "Sp. Defense": 107,
+         "Speed": 71
+      }
+   },
+   {
+      "name": {
+         "english": "Zubat"
+      },
+      "level": 22,
+      "type": [
+         "Poison",
+         "Flying"
+      ],
+      "base": {
+         "HP": 52,
+         "Attack": 59,
+         "Defense": 78,
+         "Sp. Attack": 53,
+         "Sp. Defense": 71,
+         "Speed": 117
+      }
+   },
+   {
+      "name": {
+         "english": "Golbat"
+      },
+      "level": 18,
+      "type": [
+         "Poison",
+         "Flying"
+      ],
+      "base": {
+         "HP": 40,
+         "Attack": 76,
+         "Defense": 47,
+         "Sp. Attack": 83,
+         "Sp. Defense": 49,
+         "Speed": 64
+      }
+   },
+   {
+      "name": {
+         "english": "Oddish"
+      },
+      "level": 38,
+      "type": [
+         "Grass",
+         "Poison"
+      ],
+      "base": {
+         "HP": 99,
+         "Attack": 43,
+         "Defense": 75,
+         "Sp. Attack": 68,
+         "Sp. Defense": 79,
+         "Speed": 75
+      }
+   },
+   {
+      "name": {
+         "english": "Gloom"
+      },
+      "level": 29,
+      "type": [
+         "Grass",
+         "Poison"
+      ],
+      "base": {
+         "HP": 71,
+         "Attack": 63,
+         "Defense": 43,
+         "Sp. Attack": 74,
+         "Sp. Defense": 59,
+         "Speed": 50
+      }
+   },
+   {
+      "name": {
+         "english": "Vileplume"
+      },
+      "level": 44,
+      "type": [
+         "Grass",
+         "Poison"
+      ],
+      "base": {
+         "HP": 44,
+         "Attack": 103,
+         "Defense": 94,
+         "Sp. Attack": 70,
+         "Sp. Defense": 102,
+         "Speed": 71
+      }
+   },
+   {
+      "name": {
+         "english": "Paras"
+      },
+      "level": 53,
+      "type": [
+         "Bug",
+         "Grass"
+      ],
+      "base": {
+         "HP": 53,
+         "Attack": 98,
+         "Defense": 99,
+         "Sp. Attack": 74,
+         "Sp. Defense": 71,
+         "Speed": 91
+      }
+   },
+   {
+      "name": {
+         "english": "Parasect"
+      },
+      "level": 58,
+      "type": [
+         "Bug",
+         "Grass"
+      ],
+      "base": {
+         "HP": 100,
+         "Attack": 46,
+         "Defense": 117,
+         "Sp. Attack": 68,
+         "Sp. Defense": 117,
+         "Speed": 47
+      }
+   },
+   {
+      "name": {
+         "english": "Venonat"
+      },
+      "level": 10,
+      "type": [
+         "Bug",
+         "Poison"
+      ],
+      "base": {
+         "HP": 73,
+         "Attack": 61,
+         "Defense": 45,
+         "Sp. Attack": 51,
+         "Sp. Defense": 87,
+         "Speed": 82
+      }
+   },
+   {
+      "name": {
+         "english": "Venomoth"
+      },
+      "level": 27,
+      "type": [
+         "Bug",
+         "Poison"
+      ],
+      "base": {
+         "HP": 76,
+         "Attack": 67,
+         "Defense": 100,
+         "Sp. Attack": 86,
+         "Sp. Defense": 117,
+         "Speed": 84
+      }
+   },
+   {
+      "name": {
+         "english": "Diglett"
+      },
+      "level": 39,
+      "type": [
+         "Ground"
+      ],
+      "base": {
+         "HP": 112,
+         "Attack": 50,
+         "Defense": 52,
+         "Sp. Attack": 99,
+         "Sp. Defense": 80,
+         "Speed": 96
+      }
+   },
+   {
+      "name": {
+         "english": "Dugtrio"
+      },
+      "level": 60,
+      "type": [
+         "Ground"
+      ],
+      "base": {
+         "HP": 98,
+         "Attack": 55,
+         "Defense": 40,
+         "Sp. Attack": 86,
+         "Sp. Defense": 85,
+         "Speed": 99
+      }
+   },
+   {
+      "name": {
+         "english": "Meowth"
+      },
+      "level": 54,
+      "type": [
+         "Normal"
+      ],
+      "base": {
+         "HP": 46,
+         "Attack": 93,
+         "Defense": 95,
+         "Sp. Attack": 76,
+         "Sp. Defense": 51,
+         "Speed": 64
+      }
+   },
+   {
+      "name": {
+         "english": "Persian"
+      },
+      "level": 39,
+      "type": [
+         "Normal"
+      ],
+      "base": {
+         "HP": 97,
+         "Attack": 96,
+         "Defense": 98,
+         "Sp. Attack": 90,
+         "Sp. Defense": 43,
+         "Speed": 100
+      }
+   },
+   {
+      "name": {
+         "english": "Psyduck"
+      },
+      "level": 55,
+      "type": [
+         "Water"
+      ],
+      "base": {
+         "HP": 80,
+         "Attack": 93,
+         "Defense": 66,
+         "Sp. Attack": 74,
+         "Sp. Defense": 69,
+         "Speed": 91
+      }
+   },
+   {
+      "name": {
+         "english": "Golduck"
+      },
+      "level": 48,
+      "type": [
+         "Water"
+      ],
+      "base": {
+         "HP": 44,
+         "Attack": 54,
+         "Defense": 50,
+         "Sp. Attack": 108,
+         "Sp. Defense": 60,
+         "Speed": 53
+      }
+   },
+   {
+      "name": {
+         "english": "Mankey"
+      },
+      "level": 40,
+      "type": [
+         "Fighting"
+      ],
+      "base": {
+         "HP": 90,
+         "Attack": 119,
+         "Defense": 80,
+         "Sp. Attack": 41,
+         "Sp. Defense": 61,
+         "Speed": 50
+      }
+   },
+   {
+      "name": {
+         "english": "Primeape"
+      },
+      "level": 56,
+      "type": [
+         "Fighting"
+      ],
+      "base": {
+         "HP": 67,
+         "Attack": 82,
+         "Defense": 70,
+         "Sp. Attack": 77,
+         "Sp. Defense": 58,
+         "Speed": 50
+      }
+   },
+   {
+      "name": {
+         "english": "Growlithe"
+      },
+      "level": 58,
+      "type": [
+         "Fire"
+      ],
+      "base": {
+         "HP": 46,
+         "Attack": 91,
+         "Defense": 74,
+         "Sp. Attack": 98,
+         "Sp. Defense": 112,
+         "Speed": 60
+      }
+   },
+   {
+      "name": {
+         "english": "Arcanine"
+      },
+      "level": 36,
+      "type": [
+         "Fire"
+      ],
+      "base": {
+         "HP": 59,
+         "Attack": 70,
+         "Defense": 93,
+         "Sp. Attack": 118,
+         "Sp. Defense": 104,
+         "Speed": 100
+      }
+   },
+   {
+      "name": {
+         "english": "Poliwag"
+      },
+      "level": 54,
+      "type": [
+         "Water"
+      ],
+      "base": {
+         "HP": 92,
+         "Attack": 48,
+         "Defense": 88,
+         "Sp. Attack": 48,
+         "Sp. Defense": 71,
+         "Speed": 67
+      }
+   },
+   {
+      "name": {
+         "english": "Poliwhirl"
+      },
+      "level": 30,
+      "type": [
+         "Water"
+      ],
+      "base": {
+         "HP": 46,
+         "Attack": 95,
+         "Defense": 40,
+         "Sp. Attack": 96,
+         "Sp. Defense": 72,
+         "Speed": 42
+      }
+   },
+   {
+      "name": {
+         "english": "Poliwrath"
+      },
+      "level": 40,
+      "type": [
+         "Water",
+         "Fighting"
+      ],
+      "base": {
+         "HP": 84,
+         "Attack": 76,
+         "Defense": 102,
+         "Sp. Attack": 44,
+         "Sp. Defense": 40,
+         "Speed": 88
+      }
+   },
+   {
+      "name": {
+         "english": "Abra"
+      },
+      "level": 58,
+      "type": [
+         "Psychic"
+      ],
+      "base": {
+         "HP": 80,
+         "Attack": 72,
+         "Defense": 90,
+         "Sp. Attack": 88,
+         "Sp. Defense": 63,
+         "Speed": 82
+      }
+   },
+   {
+      "name": {
+         "english": "Kadabra"
+      },
+      "level": 35,
+      "type": [
+         "Psychic"
+      ],
+      "base": {
+         "HP": 66,
+         "Attack": 82,
+         "Defense": 53,
+         "Sp. Attack": 78,
+         "Sp. Defense": 65,
+         "Speed": 52
+      }
+   },
+   {
+      "name": {
+         "english": "Alakazam"
+      },
+      "level": 26,
+      "type": [
+         "Psychic"
+      ],
+      "base": {
+         "HP": 106,
+         "Attack": 118,
+         "Defense": 79,
+         "Sp. Attack": 54,
+         "Sp. Defense": 109,
+         "Speed": 94
+      }
+   },
+   {
+      "name": {
+         "english": "Machop"
+      },
+      "level": 78,
+      "type": [
+         "Fighting"
+      ],
+      "base": {
+         "HP": 87,
+         "Attack": 120,
+         "Defense": 70,
+         "Sp. Attack": 76,
+         "Sp. Defense": 59,
+         "Speed": 120
+      }
+   },
+   {
+      "name": {
+         "english": "Machoke"
+      },
+      "level": 7,
+      "type": [
+         "Fighting"
+      ],
+      "base": {
+         "HP": 63,
+         "Attack": 86,
+         "Defense": 81,
+         "Sp. Attack": 52,
+         "Sp. Defense": 97,
+         "Speed": 108
+      }
+   },
+   {
+      "name": {
+         "english": "Machamp"
+      },
+      "level": 68,
+      "type": [
+         "Fighting"
+      ],
+      "base": {
+         "HP": 86,
+         "Attack": 99,
+         "Defense": 119,
+         "Sp. Attack": 110,
+         "Sp. Defense": 40,
+         "Speed": 58
+      }
+   },
+   {
+      "name": {
+         "english": "Bellsprout"
+      },
+      "level": 13,
+      "type": [
+         "Grass",
+         "Poison"
+      ],
+      "base": {
+         "HP": 95,
+         "Attack": 83,
+         "Defense": 89,
+         "Sp. Attack": 41,
+         "Sp. Defense": 73,
+         "Speed": 93
+      }
+   },
+   {
+      "name": {
+         "english": "Weepinbell"
+      },
+      "level": 78,
+      "type": [
+         "Grass",
+         "Poison"
+      ],
+      "base": {
+         "HP": 72,
+         "Attack": 68,
+         "Defense": 54,
+         "Sp. Attack": 52,
+         "Sp. Defense": 43,
+         "Speed": 67
+      }
+   },
+   {
+      "name": {
+         "english": "Victreebel"
+      },
+      "level": 49,
+      "type": [
+         "Grass",
+         "Poison"
+      ],
+      "base": {
+         "HP": 73,
+         "Attack": 56,
+         "Defense": 106,
+         "Sp. Attack": 69,
+         "Sp. Defense": 63,
+         "Speed": 114
+      }
+   },
+   {
+      "name": {
+         "english": "Tentacool"
+      },
+      "level": 62,
+      "type": [
+         "Water",
+         "Poison"
+      ],
+      "base": {
+         "HP": 48,
+         "Attack": 48,
+         "Defense": 74,
+         "Sp. Attack": 86,
+         "Sp. Defense": 111,
+         "Speed": 81
+      }
+   },
+   {
+      "name": {
+         "english": "Tentacruel"
+      },
+      "level": 68,
+      "type": [
+         "Water",
+         "Poison"
+      ],
+      "base": {
+         "HP": 110,
+         "Attack": 65,
+         "Defense": 62,
+         "Sp. Attack": 74,
+         "Sp. Defense": 84,
+         "Speed": 103
+      }
+   },
+   {
+      "name": {
+         "english": "Geodude"
+      },
+      "level": 33,
+      "type": [
+         "Rock",
+         "Ground"
+      ],
+      "base": {
+         "HP": 87,
+         "Attack": 113,
+         "Defense": 78,
+         "Sp. Attack": 67,
+         "Sp. Defense": 50,
+         "Speed": 100
+      }
+   },
+   {
+      "name": {
+         "english": "Graveler"
+      },
+      "level": 57,
+      "type": [
+         "Rock",
+         "Ground"
+      ],
+      "base": {
+         "HP": 97,
+         "Attack": 49,
+         "Defense": 74,
+         "Sp. Attack": 68,
+         "Sp. Defense": 102,
+         "Speed": 69
+      }
+   },
+   {
+      "name": {
+         "english": "Golem"
+      },
+      "level": 70,
+      "type": [
+         "Rock",
+         "Ground"
+      ],
+      "base": {
+         "HP": 74,
+         "Attack": 43,
+         "Defense": 116,
+         "Sp. Attack": 83,
+         "Sp. Defense": 102,
+         "Speed": 54
+      }
+   },
+   {
+      "name": {
+         "english": "Ponyta"
+      },
+      "level": 11,
+      "type": [
+         "Fire"
+      ],
+      "base": {
+         "HP": 80,
+         "Attack": 66,
+         "Defense": 59,
+         "Sp. Attack": 97,
+         "Sp. Defense": 82,
+         "Speed": 110
+      }
+   },
+   {
+      "name": {
+         "english": "Rapidash"
+      },
+      "level": 66,
+      "type": [
+         "Fire"
+      ],
+      "base": {
+         "HP": 40,
+         "Attack": 116,
+         "Defense": 43,
+         "Sp. Attack": 114,
+         "Sp. Defense": 65,
+         "Speed": 108
+      }
+   },
+   {
+      "name": {
+         "english": "Slowpoke"
+      },
+      "level": 69,
+      "type": [
+         "Water",
+         "Psychic"
+      ],
+      "base": {
+         "HP": 103,
+         "Attack": 61,
+         "Defense": 105,
+         "Sp. Attack": 99,
+         "Sp. Defense": 95,
+         "Speed": 60
+      }
+   },
+   {
+      "name": {
+         "english": "Slowbro"
+      },
+      "level": 72,
+      "type": [
+         "Water",
+         "Psychic"
+      ],
+      "base": {
+         "HP": 107,
+         "Attack": 84,
+         "Defense": 79,
+         "Sp. Attack": 90,
+         "Sp. Defense": 57,
+         "Speed": 115
+      }
+   },
+   {
+      "name": {
+         "english": "Magnemite"
+      },
+      "level": 5,
+      "type": [
+         "Electric",
+         "Steel"
+      ],
+      "base": {
+         "HP": 46,
+         "Attack": 42,
+         "Defense": 97,
+         "Sp. Attack": 84,
+         "Sp. Defense": 102,
+         "Speed": 119
+      }
+   },
+   {
+      "name": {
+         "english": "Magneton"
+      },
+      "level": 52,
+      "type": [
+         "Electric",
+         "Steel"
+      ],
+      "base": {
+         "HP": 68,
+         "Attack": 56,
+         "Defense": 75,
+         "Sp. Attack": 83,
+         "Sp. Defense": 56,
+         "Speed": 70
+      }
+   },
+   {
+      "name": {
+         "english": "Farfetch\u2019d"
+      },
+      "level": 36,
+      "type": [
+         "Normal",
+         "Flying"
+      ],
+      "base": {
+         "HP": 87,
+         "Attack": 92,
+         "Defense": 48,
+         "Sp. Attack": 100,
+         "Sp. Defense": 92,
+         "Speed": 53
+      }
+   },
+   {
+      "name": {
+         "english": "Doduo"
+      },
+      "level": 43,
+      "type": [
+         "Normal",
+         "Flying"
+      ],
+      "base": {
+         "HP": 110,
+         "Attack": 81,
+         "Defense": 45,
+         "Sp. Attack": 75,
+         "Sp. Defense": 92,
+         "Speed": 97
+      }
+   },
+   {
+      "name": {
+         "english": "Dodrio"
+      },
+      "level": 41,
+      "type": [
+         "Normal",
+         "Flying"
+      ],
+      "base": {
+         "HP": 77,
+         "Attack": 52,
+         "Defense": 60,
+         "Sp. Attack": 60,
+         "Sp. Defense": 71,
+         "Speed": 115
+      }
+   },
+   {
+      "name": {
+         "english": "Seel"
+      },
+      "level": 15,
+      "type": [
+         "Water"
+      ],
+      "base": {
+         "HP": 66,
+         "Attack": 54,
+         "Defense": 102,
+         "Sp. Attack": 40,
+         "Sp. Defense": 115,
+         "Speed": 41
+      }
+   },
+   {
+      "name": {
+         "english": "Dewgong"
+      },
+      "level": 60,
+      "type": [
+         "Water",
+         "Ice"
+      ],
+      "base": {
+         "HP": 81,
+         "Attack": 67,
+         "Defense": 80,
+         "Sp. Attack": 99,
+         "Sp. Defense": 41,
+         "Speed": 67
+      }
+   },
+   {
+      "name": {
+         "english": "Grimer"
+      },
+      "level": 33,
+      "type": [
+         "Poison"
+      ],
+      "base": {
+         "HP": 107,
+         "Attack": 85,
+         "Defense": 87,
+         "Sp. Attack": 71,
+         "Sp. Defense": 46,
+         "Speed": 87
+      }
+   },
+   {
+      "name": {
+         "english": "Muk"
+      },
+      "level": 41,
+      "type": [
+         "Poison"
+      ],
+      "base": {
+         "HP": 67,
+         "Attack": 114,
+         "Defense": 77,
+         "Sp. Attack": 62,
+         "Sp. Defense": 60,
+         "Speed": 53
+      }
+   },
+   {
+      "name": {
+         "english": "Shellder"
+      },
+      "level": 26,
+      "type": [
+         "Water"
+      ],
+      "base": {
+         "HP": 112,
+         "Attack": 77,
+         "Defense": 100,
+         "Sp. Attack": 57,
+         "Sp. Defense": 52,
+         "Speed": 100
+      }
+   },
+   {
+      "name": {
+         "english": "Cloyster"
+      },
+      "level": 54,
+      "type": [
+         "Water",
+         "Ice"
+      ],
+      "base": {
+         "HP": 44,
+         "Attack": 51,
+         "Defense": 60,
+         "Sp. Attack": 51,
+         "Sp. Defense": 89,
+         "Speed": 65
+      }
+   },
+   {
+      "name": {
+         "english": "Gastly"
+      },
+      "level": 77,
+      "type": [
+         "Ghost",
+         "Poison"
+      ],
+      "base": {
+         "HP": 59,
+         "Attack": 92,
+         "Defense": 112,
+         "Sp. Attack": 100,
+         "Sp. Defense": 56,
+         "Speed": 67
+      }
+   },
+   {
+      "name": {
+         "english": "Haunter"
+      },
+      "level": 53,
+      "type": [
+         "Ghost",
+         "Poison"
+      ],
+      "base": {
+         "HP": 106,
+         "Attack": 42,
+         "Defense": 92,
+         "Sp. Attack": 66,
+         "Sp. Defense": 65,
+         "Speed": 97
+      }
+   },
+   {
+      "name": {
+         "english": "Gengar"
+      },
+      "level": 46,
+      "type": [
+         "Ghost",
+         "Poison"
+      ],
+      "base": {
+         "HP": 52,
+         "Attack": 46,
+         "Defense": 48,
+         "Sp. Attack": 84,
+         "Sp. Defense": 70,
+         "Speed": 83
+      }
+   },
+   {
+      "name": {
+         "english": "Onix"
+      },
+      "level": 45,
+      "type": [
+         "Rock",
+         "Ground"
+      ],
+      "base": {
+         "HP": 85,
+         "Attack": 111,
+         "Defense": 56,
+         "Sp. Attack": 99,
+         "Sp. Defense": 48,
+         "Speed": 47
+      }
+   },
+   {
+      "name": {
+         "english": "Drowzee"
+      },
+      "level": 24,
+      "type": [
+         "Psychic"
+      ],
+      "base": {
+         "HP": 92,
+         "Attack": 72,
+         "Defense": 118,
+         "Sp. Attack": 114,
+         "Sp. Defense": 119,
+         "Speed": 106
+      }
+   },
+   {
+      "name": {
+         "english": "Hypno"
+      },
+      "level": 16,
+      "type": [
+         "Psychic"
+      ],
+      "base": {
+         "HP": 105,
+         "Attack": 102,
+         "Defense": 82,
+         "Sp. Attack": 96,
+         "Sp. Defense": 69,
+         "Speed": 96
+      }
+   },
+   {
+      "name": {
+         "english": "Krabby"
+      },
+      "level": 5,
+      "type": [
+         "Water"
+      ],
+      "base": {
+         "HP": 66,
+         "Attack": 104,
+         "Defense": 85,
+         "Sp. Attack": 45,
+         "Sp. Defense": 42,
+         "Speed": 49
+      }
+   },
+   {
+      "name": {
+         "english": "Kingler"
+      },
+      "level": 59,
+      "type": [
+         "Water"
+      ],
+      "base": {
+         "HP": 75,
+         "Attack": 60,
+         "Defense": 55,
+         "Sp. Attack": 110,
+         "Sp. Defense": 53,
+         "Speed": 62
+      }
+   },
+   {
+      "name": {
+         "english": "Voltorb"
+      },
+      "level": 61,
+      "type": [
+         "Electric"
+      ],
+      "base": {
+         "HP": 98,
+         "Attack": 95,
+         "Defense": 81,
+         "Sp. Attack": 90,
+         "Sp. Defense": 45,
+         "Speed": 47
+      }
+   },
+   {
+      "name": {
+         "english": "Electrode"
+      },
+      "level": 37,
+      "type": [
+         "Electric"
+      ],
+      "base": {
+         "HP": 98,
+         "Attack": 102,
+         "Defense": 87,
+         "Sp. Attack": 85,
+         "Sp. Defense": 90,
+         "Speed": 53
+      }
+   },
+   {
+      "name": {
+         "english": "Exeggcute"
+      },
+      "level": 8,
+      "type": [
+         "Grass",
+         "Psychic"
+      ],
+      "base": {
+         "HP": 67,
+         "Attack": 63,
+         "Defense": 116,
+         "Sp. Attack": 106,
+         "Sp. Defense": 45,
+         "Speed": 44
+      }
+   },
+   {
+      "name": {
+         "english": "Exeggutor"
+      },
+      "level": 22,
+      "type": [
+         "Grass",
+         "Psychic"
+      ],
+      "base": {
+         "HP": 52,
+         "Attack": 59,
+         "Defense": 70,
+         "Sp. Attack": 68,
+         "Sp. Defense": 104,
+         "Speed": 87
+      }
+   },
+   {
+      "name": {
+         "english": "Cubone"
+      },
+      "level": 45,
+      "type": [
+         "Ground"
+      ],
+      "base": {
+         "HP": 79,
+         "Attack": 41,
+         "Defense": 116,
+         "Sp. Attack": 81,
+         "Sp. Defense": 48,
+         "Speed": 120
+      }
+   },
+   {
+      "name": {
+         "english": "Marowak"
+      },
+      "level": 23,
+      "type": [
+         "Grass"
+      ],
+      "base": {
+         "HP": 96,
+         "Attack": 77,
+         "Defense": 109,
+         "Sp. Attack": 112,
+         "Sp. Defense": 75,
+         "Speed": 67
+      }
+   },
+   {
+      "name": {
+         "english": "Hitmonlee"
+      },
+      "level": 6,
+      "type": [
+         "Fighting"
+      ],
+      "base": {
+         "HP": 48,
+         "Attack": 82,
+         "Defense": 119,
+         "Sp. Attack": 42,
+         "Sp. Defense": 43,
+         "Speed": 47
+      }
+   },
+   {
+      "name": {
+         "english": "Hitmonchan"
+      },
+      "level": 60,
+      "type": [
+         "Fighting"
+      ],
+      "base": {
+         "HP": 69,
+         "Attack": 62,
+         "Defense": 119,
+         "Sp. Attack": 76,
+         "Sp. Defense": 80,
+         "Speed": 41
+      }
+   },
+   {
+      "name": {
+         "english": "Lickitung"
+      },
+      "level": 48,
+      "type": [
+         "Normal"
+      ],
+      "base": {
+         "HP": 56,
+         "Attack": 102,
+         "Defense": 75,
+         "Sp. Attack": 64,
+         "Sp. Defense": 66,
+         "Speed": 64
+      }
+   },
+   {
+      "name": {
+         "english": "Koffing"
+      },
+      "level": 9,
+      "type": [
+         "Poison"
+      ],
+      "base": {
+         "HP": 58,
+         "Attack": 68,
+         "Defense": 67,
+         "Sp. Attack": 114,
+         "Sp. Defense": 63,
+         "Speed": 84
+      }
+   },
+   {
+      "name": {
+         "english": "Weezing"
+      },
+      "level": 75,
+      "type": [
+         "Poison"
+      ],
+      "base": {
+         "HP": 108,
+         "Attack": 115,
+         "Defense": 53,
+         "Sp. Attack": 95,
+         "Sp. Defense": 64,
+         "Speed": 82
+      }
+   },
+   {
+      "name": {
+         "english": "Rhyhorn"
+      },
+      "level": 71,
+      "type": [
+         "Ground",
+         "Rock"
+      ],
+      "base": {
+         "HP": 89,
+         "Attack": 78,
+         "Defense": 54,
+         "Sp. Attack": 43,
+         "Sp. Defense": 109,
+         "Speed": 95
+      }
+   },
+   {
+      "name": {
+         "english": "Rhydon"
+      },
+      "level": 22,
+      "type": [
+         "Ground",
+         "Rock"
+      ],
+      "base": {
+         "HP": 85,
+         "Attack": 77,
+         "Defense": 119,
+         "Sp. Attack": 109,
+         "Sp. Defense": 118,
+         "Speed": 63
+      }
+   },
+   {
+      "name": {
+         "english": "Chansey"
+      },
+      "level": 67,
+      "type": [
+         "Normal"
+      ],
+      "base": {
+         "HP": 112,
+         "Attack": 65,
+         "Defense": 83,
+         "Sp. Attack": 106,
+         "Sp. Defense": 42,
+         "Speed": 62
+      }
+   },
+   {
+      "name": {
+         "english": "Tangela"
+      },
+      "level": 53,
+      "type": [
+         "Grass"
+      ],
+      "base": {
+         "HP": 71,
+         "Attack": 104,
+         "Defense": 99,
+         "Sp. Attack": 94,
+         "Sp. Defense": 71,
+         "Speed": 118
+      }
+   },
+   {
+      "name": {
+         "english": "Kangaskhan"
+      },
+      "level": 30,
+      "type": [
+         "Normal"
+      ],
+      "base": {
+         "HP": 78,
+         "Attack": 40,
+         "Defense": 107,
+         "Sp. Attack": 59,
+         "Sp. Defense": 69,
+         "Speed": 67
+      }
+   },
+   {
+      "name": {
+         "english": "Horsea"
+      },
+      "level": 44,
+      "type": [
+         "Water"
+      ],
+      "base": {
+         "HP": 68,
+         "Attack": 114,
+         "Defense": 57,
+         "Sp. Attack": 104,
+         "Sp. Defense": 82,
+         "Speed": 76
+      }
+   },
+   {
+      "name": {
+         "english": "Seadra"
+      },
+      "level": 48,
+      "type": [
+         "Water"
+      ],
+      "base": {
+         "HP": 83,
+         "Attack": 107,
+         "Defense": 91,
+         "Sp. Attack": 102,
+         "Sp. Defense": 70,
+         "Speed": 109
+      }
+   },
+   {
+      "name": {
+         "english": "Goldeen"
+      },
+      "level": 53,
+      "type": [
+         "Water"
+      ],
+      "base": {
+         "HP": 73,
+         "Attack": 61,
+         "Defense": 108,
+         "Sp. Attack": 90,
+         "Sp. Defense": 117,
+         "Speed": 73
+      }
+   },
+   {
+      "name": {
+         "english": "Seaking"
+      },
+      "level": 11,
+      "type": [
+         "Water"
+      ],
+      "base": {
+         "HP": 56,
+         "Attack": 49,
+         "Defense": 101,
+         "Sp. Attack": 112,
+         "Sp. Defense": 65,
+         "Speed": 120
+      }
+   },
+   {
+      "name": {
+         "english": "Staryu"
+      },
+      "level": 25,
+      "type": [
+         "Water"
+      ],
+      "base": {
+         "HP": 91,
+         "Attack": 72,
+         "Defense": 102,
+         "Sp. Attack": 62,
+         "Sp. Defense": 80,
+         "Speed": 56
+      }
+   },
+   {
+      "name": {
+         "english": "Starmie"
+      },
+      "level": 61,
+      "type": [
+         "Water",
+         "Psychic"
+      ],
+      "base": {
+         "HP": 92,
+         "Attack": 94,
+         "Defense": 68,
+         "Sp. Attack": 42,
+         "Sp. Defense": 84,
+         "Speed": 118
+      }
+   },
+   {
+      "name": {
+         "english": "Mr. Mime"
+      },
+      "level": 59,
+      "type": [
+         "Psychic",
+         "Fairy"
+      ],
+      "base": {
+         "HP": 79,
+         "Attack": 60,
+         "Defense": 100,
+         "Sp. Attack": 74,
+         "Sp. Defense": 67,
+         "Speed": 71
+      }
+   },
+   {
+      "name": {
+         "english": "Scyther"
+      },
+      "level": 56,
+      "type": [
+         "Bug",
+         "Flying"
+      ],
+      "base": {
+         "HP": 115,
+         "Attack": 100,
+         "Defense": 80,
+         "Sp. Attack": 73,
+         "Sp. Defense": 96,
+         "Speed": 68
+      }
+   },
+   {
+      "name": {
+         "english": "Jynx"
+      },
+      "level": 40,
+      "type": [
+         "Ice",
+         "Psychic"
+      ],
+      "base": {
+         "HP": 79,
+         "Attack": 119,
+         "Defense": 100,
+         "Sp. Attack": 111,
+         "Sp. Defense": 101,
+         "Speed": 46
+      }
+   },
+   {
+      "name": {
+         "english": "Electabuzz"
+      },
+      "level": 27,
+      "type": [
+         "Electric"
+      ],
+      "base": {
+         "HP": 66,
+         "Attack": 107,
+         "Defense": 117,
+         "Sp. Attack": 115,
+         "Sp. Defense": 66,
+         "Speed": 84
+      }
+   },
+   {
+      "name": {
+         "english": "Magmar"
+      },
+      "level": 49,
+      "type": [
+         "Fire"
+      ],
+      "base": {
+         "HP": 103,
+         "Attack": 51,
+         "Defense": 61,
+         "Sp. Attack": 69,
+         "Sp. Defense": 100,
+         "Speed": 95
+      }
+   },
+   {
+      "name": {
+         "english": "Pinsir"
+      },
+      "level": 65,
+      "type": [
+         "Bug"
+      ],
+      "base": {
+         "HP": 43,
+         "Attack": 105,
+         "Defense": 79,
+         "Sp. Attack": 57,
+         "Sp. Defense": 62,
+         "Speed": 54
+      }
+   },
+   {
+      "name": {
+         "english": "Tauros"
+      },
+      "level": 26,
+      "type": [
+         "Normal"
+      ],
+      "base": {
+         "HP": 55,
+         "Attack": 109,
+         "Defense": 40,
+         "Sp. Attack": 81,
+         "Sp. Defense": 64,
+         "Speed": 117
+      }
+   },
+   {
+      "name": {
+         "english": "Magikarp"
+      },
+      "level": 47,
+      "type": [
+         "Water"
+      ],
+      "base": {
+         "HP": 41,
+         "Attack": 83,
+         "Defense": 78,
+         "Sp. Attack": 70,
+         "Sp. Defense": 97,
+         "Speed": 113
+      }
+   },
+   {
+      "name": {
+         "english": "Gyarados"
+      },
+      "level": 21,
+      "type": [
+         "Water",
+         "Flying"
+      ],
+      "base": {
+         "HP": 105,
+         "Attack": 46,
+         "Defense": 75,
+         "Sp. Attack": 65,
+         "Sp. Defense": 112,
+         "Speed": 49
+      }
+   },
+   {
+      "name": {
+         "english": "Lapras"
+      },
+      "level": 43,
+      "type": [
+         "Water",
+         "Ice"
+      ],
+      "base": {
+         "HP": 71,
+         "Attack": 57,
+         "Defense": 110,
+         "Sp. Attack": 102,
+         "Sp. Defense": 108,
+         "Speed": 82
+      }
+   },
+   {
+      "name": {
+         "english": "Ditto"
+      },
+      "level": 67,
+      "type": [
+         "Normal"
+      ],
+      "base": {
+         "HP": 54,
+         "Attack": 102,
+         "Defense": 101,
+         "Sp. Attack": 66,
+         "Sp. Defense": 47,
+         "Speed": 98
+      }
+   },
+   {
+      "name": {
+         "english": "Eevee"
+      },
+      "level": 63,
+      "type": [
+         "Normal"
+      ],
+      "base": {
+         "HP": 40,
+         "Attack": 90,
+         "Defense": 117,
+         "Sp. Attack": 101,
+         "Sp. Defense": 101,
+         "Speed": 83
+      }
+   },
+   {
+      "name": {
+         "english": "Vaporeon"
+      },
+      "level": 48,
+      "type": [
+         "Water"
+      ],
+      "base": {
+         "HP": 61,
+         "Attack": 84,
+         "Defense": 99,
+         "Sp. Attack": 114,
+         "Sp. Defense": 52,
+         "Speed": 90
+      }
+   },
+   {
+      "name": {
+         "english": "Jolteon"
+      },
+      "level": 71,
+      "type": [
+         "Electric"
+      ],
+      "base": {
+         "HP": 109,
+         "Attack": 96,
+         "Defense": 77,
+         "Sp. Attack": 70,
+         "Sp. Defense": 103,
+         "Speed": 51
+      }
+   },
+   {
+      "name": {
+         "english": "Flareon"
+      },
+      "level": 9,
+      "type": [
+         "Fire"
+      ],
+      "base": {
+         "HP": 80,
+         "Attack": 55,
+         "Defense": 49,
+         "Sp. Attack": 90,
+         "Sp. Defense": 96,
+         "Speed": 106
+      }
+   },
+   {
+      "name": {
+         "english": "Porygon"
+      },
+      "level": 77,
+      "type": [
+         "Normal"
+      ],
+      "base": {
+         "HP": 53,
+         "Attack": 88,
+         "Defense": 109,
+         "Sp. Attack": 104,
+         "Sp. Defense": 101,
+         "Speed": 106
+      }
+   },
+   {
+      "name": {
+         "english": "Omanyte"
+      },
+      "level": 23,
+      "type": [
+         "Rock",
+         "Water"
+      ],
+      "base": {
+         "HP": 65,
+         "Attack": 97,
+         "Defense": 65,
+         "Sp. Attack": 94,
+         "Sp. Defense": 97,
+         "Speed": 76
+      }
+   },
+   {
+      "name": {
+         "english": "Omastar"
+      },
+      "level": 6,
+      "type": [
+         "Rock",
+         "Water"
+      ],
+      "base": {
+         "HP": 56,
+         "Attack": 76,
+         "Defense": 111,
+         "Sp. Attack": 51,
+         "Sp. Defense": 66,
+         "Speed": 76
+      }
+   },
+   {
+      "name": {
+         "english": "Kabuto"
+      },
+      "level": 68,
+      "type": [
+         "Rock",
+         "Water"
+      ],
+      "base": {
+         "HP": 112,
+         "Attack": 92,
+         "Defense": 40,
+         "Sp. Attack": 64,
+         "Sp. Defense": 106,
+         "Speed": 48
+      }
+   },
+   {
+      "name": {
+         "english": "Kabutops"
+      },
+      "level": 58,
+      "type": [
+         "Rock",
+         "Water"
+      ],
+      "base": {
+         "HP": 110,
+         "Attack": 120,
+         "Defense": 49,
+         "Sp. Attack": 40,
+         "Sp. Defense": 75,
+         "Speed": 54
+      }
+   },
+   {
+      "name": {
+         "english": "Aerodactyl"
+      },
+      "level": 39,
+      "type": [
+         "Rock",
+         "Flying"
+      ],
+      "base": {
+         "HP": 84,
+         "Attack": 86,
+         "Defense": 44,
+         "Sp. Attack": 83,
+         "Sp. Defense": 55,
+         "Speed": 53
+      }
+   },
+   {
+      "name": {
+         "english": "Snorlax"
+      },
+      "level": 61,
+      "type": [
+         "Normal"
+      ],
+      "base": {
+         "HP": 72,
+         "Attack": 63,
+         "Defense": 117,
+         "Sp. Attack": 66,
+         "Sp. Defense": 85,
+         "Speed": 73
+      }
+   },
+   {
+      "name": {
+         "english": "Articuno"
+      },
+      "level": 46,
+      "type": [
+         "Ice",
+         "Flying"
+      ],
+      "base": {
+         "HP": 46,
+         "Attack": 70,
+         "Defense": 98,
+         "Sp. Attack": 49,
+         "Sp. Defense": 113,
+         "Speed": 116
+      }
+   },
+   {
+      "name": {
+         "english": "Zapdos"
+      },
+      "level": 5,
+      "type": [
+         "Electric",
+         "Flying"
+      ],
+      "base": {
+         "HP": 89,
+         "Attack": 66,
+         "Defense": 105,
+         "Sp. Attack": 109,
+         "Sp. Defense": 58,
+         "Speed": 72
+      }
+   },
+   {
+      "name": {
+         "english": "Moltres"
+      },
+      "level": 31,
+      "type": [
+         "Fire",
+         "Flying"
+      ],
+      "base": {
+         "HP": 116,
+         "Attack": 59,
+         "Defense": 58,
+         "Sp. Attack": 64,
+         "Sp. Defense": 42,
+         "Speed": 45
+      }
+   },
+   {
+      "name": {
+         "english": "Dratini"
+      },
+      "level": 13,
+      "type": [
+         "Dragon"
+      ],
+      "base": {
+         "HP": 58,
+         "Attack": 50,
+         "Defense": 98,
+         "Sp. Attack": 59,
+         "Sp. Defense": 68,
+         "Speed": 63
+      }
+   },
+   {
+      "name": {
+         "english": "Dragonair"
+      },
+      "level": 27,
+      "type": [
+         "Dragon"
+      ],
+      "base": {
+         "HP": 71,
+         "Attack": 55,
+         "Defense": 49,
+         "Sp. Attack": 116,
+         "Sp. Defense": 73,
+         "Speed": 106
+      }
+   },
+   {
+      "name": {
+         "english": "Dragonite"
+      },
+      "level": 60,
+      "type": [
+         "Dragon",
+         "Flying"
+      ],
+      "base": {
+         "HP": 49,
+         "Attack": 68,
+         "Defense": 50,
+         "Sp. Attack": 82,
+         "Sp. Defense": 110,
+         "Speed": 63
+      }
+   },
+   {
+      "name": {
+         "english": "Mewtwo"
+      },
+      "level": 30,
+      "type": [
+         "Psychic"
+      ],
+      "base": {
+         "HP": 60,
+         "Attack": 94,
+         "Defense": 116,
+         "Sp. Attack": 110,
+         "Sp. Defense": 113,
+         "Speed": 69
+      }
+   },
+   {
+      "name": {
+         "english": "Mew"
+      },
+      "level": 78,
+      "type": [
+         "Psychic"
+      ],
+      "base": {
+         "HP": 80,
+         "Attack": 89,
+         "Defense": 48,
+         "Sp. Attack": 117,
+         "Sp. Defense": 90,
+         "Speed": 77
+      }
+   }
+]
