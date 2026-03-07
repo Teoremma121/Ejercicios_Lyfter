@@ -81,7 +81,7 @@ def ask_for_level():
     while valid_level == False:
         try:
             level = int(input("\nDigite el nivel del pokemon:\n> "))
-            if level in range(1,100):
+            if level in range(1,101):
                 valid_level = True
             else:
                 raise ValueError("Un pokemon no puede tener un nivel menor a 1 o mayor a 100")
