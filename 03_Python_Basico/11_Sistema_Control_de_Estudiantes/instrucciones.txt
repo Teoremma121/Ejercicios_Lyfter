@@ -1,0 +1,48 @@
+Recomendaciones
+- Lea todos los requerimientos y detalles técnicos cuidadosamente.
+- Divida todos los requerimientos en tareas más pequeñas (dividir para conquistar).
+- Haga notas de aquellos requerimientos que no sepa cómo desarrollar con exactitud.
+- Divida la lógica del programa en funciones pequeñas.
+- Todas las funcionen deberían tener una sola responsabilidad.
+- Escriba código limpio. Use identificadores específicos y fáciles de entender.
+- Pregunte cualquier duda que tenga.
+- Escriba todo el código en ingles.
+
+Requerimientos
+- Cree un programa que tenga una interfaz por linea de comando (es decir, a base de inputs y prints).
+- Este debe tener un menu que me permita accesar a todas las funciones
+    (deberá validar que se ingrese una opción válida del menú):
+    - Ingresar información de n cantidad de estudiantes, uno por uno.
+        - Cada estudiante debe incluir:
+        - Nombre completo
+        - Sección (ejemplo: 11B)
+        - Nota de español
+        - Nota de inglés
+        - Nota de sociales
+        - Nota de ciencias
+        - Deberá validar que las notas ingresadas sean válidas (números de 0 a 100)
+            y seguir pidiéndola hasta que sea válida.
+    - Ver la información de todos los estudiantes ingresados.
+    - Ver el top 3 de los estudiantes con la mejor nota promedio (es decir, el promedio de su nota de español+ nota de inglés + nota de sociales + nota de ciencias).
+    - Ver la nota promedio entre las notas de todos los estudiantes (es decir, el promedio del promedio de notas de cada uno).
+    - Exportar todos los datos actuales a un archivo CSV.
+    - Importar los datos de un archivo CSV previamente exportado.
+        - Si no hay un archivo previamente exportado, debe de decírselo al usuario.
+- Divida el proyecto en los siguientes módulos:
+    - main: tendrá el punto de entrada del programa.
+    - menu: tendrá toda la lógica relacionada al menu de opciones.
+    - actions: tendrá toda la lógica de las acciones del menu, excepto las de exportar e importar datos.
+    - data: tendrá toda la lógica de exportación e importación de datos.
+
+Requerimientos extra (opcionales)
+- Agregue una opción nueva al menú que permita eliminar a un estudiante usando su nombre y sección. Esta Debe validar:
+    - Si el estudiante existe o no
+    - Confirmar con el usuario antes de eliminar
+- Mostrar estudiantes reprobados, enlistando todos los estudiantes que tengan al menos una materia con nota menor a 60.
+    - Añada una opción al menú: Ver estudiantes reprobados
+    - Muestre el nombre, sección y las materias reprobadas con sus notas
+- Mejore el sistema agregando el siguiente manejo de errores:
+    - Que el nombre completo no esté vacío ni tenga números
+    - Que la sección siga el formato válido (ejemplo: "10A", "11B", etc.)
+    - Que no se permita ingresar dos estudiantes con el mismo nombre y sección (no duplicados)
+    - Tip: Puede hacer una función is_valid_name, is_valid_section y student_exists
