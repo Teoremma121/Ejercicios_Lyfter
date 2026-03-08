@@ -46,3 +46,18 @@ Requerimientos extra (opcionales)
     - Que la sección siga el formato válido (ejemplo: "10A", "11B", etc.)
     - Que no se permita ingresar dos estudiantes con el mismo nombre y sección (no duplicados)
     - Tip: Puede hacer una función is_valid_name, is_valid_section y student_exists
+
+
+    Notas:
+    - Quiero crear una función de buscar estudiante para comprimir el código
+    - Agregar confirmación de eliminación de estudiante
+    - Agregar verificación en la cantidad de estudiantes que se quieren agregar
+    - Priorizar crear las acciones para importar, exportar datos
+    - Dividir función de modify en funciones de name, section, grades
+    - Las nuevas acciones de mostrar debería ser capaz de hacerlas bastante modulares
+        - Funciones de filtro-agrupación
+        - Funciones de info para mostrar
+        - Capaz de combinarlas para no crear tantas funciones distintas
+    - Quiero crear una acción que haga tracking de si se modificó información y no se guardó
+    - Una mejora puede ser agregar la opción de HOME en todos los menú
+    - La lógica del menú puedo reducirla con una función que reciba exceptions, Back, HOME

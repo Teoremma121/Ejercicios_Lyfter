@@ -2,10 +2,11 @@ import menu
 import actions
 
 def main():
+    data = []
     current_index = ["0"]
     while True:
         current_index = menu.navigate_menu(current_index)
-        actions.index_to_action(".".join(current_index))
+        data = actions.index_to_action(current_index,data)
         current_index = after_action(current_index)
 
 def after_action(main_index):

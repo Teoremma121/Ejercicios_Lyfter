@@ -35,7 +35,18 @@ def navigate_menu(index):
             index.append(entry)
         elif ".".join(index) == "0.1":
             entry = call_add_delete_or_mofify_menu()
-            if entry != "4":
+            if entry == "4":
+                index.pop()
+            elif entry == "2":
+                index.append(entry)
+            else:
+                index.append(entry)
+                action = True
+        elif ".".join(index) == "0.1.2":
+            entry = call_modify_menu()
+            if entry == "3":
+                index.append(entry)
+            elif entry in ["1","2","5"]:
                 index.append(entry)
                 action = True
             else:
@@ -58,8 +69,8 @@ def navigate_menu(index):
                 index.append(entry)
             else:
                 index.pop()
-        elif ".".join(index) in ["0.2.1.3","0.2.2.3"]:
-            entry = call_pick_signature()
+        elif ".".join(index) in ["0.2.1.3","0.2.2.3","0.1.2.3"]:
+            entry = call_pick_asignature()
             if entry != "6":
                 index.append(entry)
                 action = True
@@ -101,9 +112,21 @@ def call_add_delete_or_mofify_menu():
     index = 0
     while index == 0:
         print("\nDigite el número de índice de la acción que desea realizar:")
-        print(" 1- Agregar un estudiante")
-        print(" 2- Editar la información de estudiante")
+        print(" 1- Agregar estudiantes")
+        print(" 2- Editar la información de un estudiante")
         print(" 3- Eliminar un estudiante")
+        print(" 4- Regresar")
+        print(" 5- SALIR")
+        index = input_valid_index(1,6)
+    return index
+
+def call_modify_menu():
+    index = 0
+    while index == 0:
+        print("\nDigite el número de índice de la información que desea editar")
+        print(" 1- Nombre")
+        print(" 2- Sección")
+        print(" 3- Notas")
         print(" 4- Regresar")
         print(" 5- SALIR")
         index = input_valid_index(1,6)
@@ -133,10 +156,10 @@ def call_mode_of_students_info_menu():
         index = input_valid_index(1,6)
     return index
 
-def call_pick_signature():
+def call_pick_asignature():
     index = 0
     while index == 0:
-        print("\nDigite el número de índice de la materia para la cual desea generar un resumen:")
+        print("\nDigite el número de índice de la materia:")
         print(" 1- Español")
         print(" 2- Inglés")
         print(" 3- Estudios Sociales")

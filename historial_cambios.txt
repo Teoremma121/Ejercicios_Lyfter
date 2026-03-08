@@ -1,28 +1,70 @@
+commit 16871f3ffc4734dd90346717bd1925733bba8ab7 (HEAD -> sistema-control-estudiantes)
+Date:   Sat Mar 7 20:41:14 2026
+    Menú de inputs navegable y funcional
+    - Se crean los módulos menu.py, actions.py, data.py, main.py
+    - En el módulo menu.py se desarrolló toda la lógica para que el usuario pueda navegar
+        a través de los menú hasta ejecutar alguna función del programa
+    - En el módulo actions.py se agrega el diccionario index_descriptions y la función index_to_action()
+        para relacionar el índice seleccionado por el usuario con la acción respectiva
+    - De momento index_to_action solo ejecuta la acción de SALIR. La lógica de las demás acciones
+        se agregará conforme se implementen las funciones de cada acción
+    - El módulo main() contiene el ciclo de principal de ejecución del programa que consiste en:
+        > Convocar el menú
+        > Ejecutar una acción
+        > Consultar al usuario si quiere salir o ejecutar otra acción
+        > El programa se cierra o vuelve a iniciar el ciclo
+
+commit 3fb261c71c5abfccba8602627c386eea668679fd (origin/main, origin/HEAD, main)     
+Merge: da1bdb7 bec0c65
+Date:   Sat Mar 7 15:05:50 2026
+    Merge pull request #4 from Teoremma121/experimentación
+    Se crea el historial de cambios, ejercicios extra de Git
+    - Se hace merge en la rama principal con los cambios efectuados en la rama ejercicios extra de Git
+
+commit da1bdb7dfb40ead1517a70f99e55471c7db13b2e
+Merge: a56ad4f 4c5f0b3
+Date:   Sat Mar 7 15:03:28 2026
+Merge pull request #3 from Teoremma121/fix-errores-menores
+    Fix menor en archivo Manejo_de_JSON_EPE.py
+    - Se hace merge en la rama principal con los cambios efectuados en la rama fix-errores-menores
+
+commit 4c5f0b3264d7016ab5c6ecaf0c3760f6e593f29b (origin/fix-errores-menores, fix-errores-menores)
+Date:   Fri Mar 6 13:23:44 2026
+    Fix menor en archivo Manejo_de_JSON_EPE.py
+    - Se cambia el rango de la función ask_for_level() para que sea range(1,101)
+
+commit bec0c6504282dcd6df81f0be21ba4dbd5ba05768 (origin/experimentación, experimentación)
+Date:   Fri Mar 6 13:11:49 2026
+    Se crea el historial de cambios, ejercicios extra de Git
+    - Se crea el arhivo historial_cambios.txt, que funciona como change_log
+
 commit a56ad4f132475585d0eeb55d67cebdc6d56d35b1 (HEAD -> main, origin/main, origin/HEAD)
+Merge: 32721a2 36cee77
 Date:   Fri Mar 6 12:49:32 2026
 Merge pull request #2 from Teoremma121/past-exercises
-Se agregan al directorio los ejercicios previamente entregados y revisados
-- Se hace merge en la rama principal con los cambios efectuados en la rama past-exercises
+    Se agregan al directorio los ejercicios previamente entregados y revisados
+    - Se hace merge en la rama principal con los cambios efectuados en la rama past-exercises
 
 commit 36cee7799f32a4e96bb3651170bad637251bf9c9 (origin/past-exercises, past-exercises)
 Date:   Thu Mar 5 23:37:40 2026
-Se agregan al directorio los ejercicios ya entregados y revisados
-- Se crea la estructura de directorios para compilar en el repositorio los ejercicios realizados hasta el momento
-- Se agregan los archivos en sus respectivos directorios
-- Se elimina la carpeta Mi_primer_PR que se había creado para aprender sobre Git y Github
+    Se agregan al directorio los ejercicios ya entregados y revisados
+    - Se crea la estructura de directorios para compilar en el repositorio los ejercicios realizados hasta el momento
+    - Se agregan los archivos en sus respectivos directorios
+    - Se elimina la carpeta Mi_primer_PR que se había creado para aprender sobre Git y Github
 
 commit 32721a2c902d57546055e66aeecb82271cb38a27
+Merge: 2a63012 dad54e0
 Date:   Thu Mar 5 21:53:58 2026
-Merge pull request #1 from Teoremma121/Mi-primer-PR-en-Github
-Mi primer PR en Github
-- Se hace merge en la rama principal con los cambios de la rama "Mi-Primer-PR-en-Github"
+    Merge pull request #1 from Teoremma121/Mi-primer-PR-en-Github
+    Mi primer PR en Github
+    - Se hace merge en la rama principal con los cambios de la rama "Mi-Primer-PR-en-Github"
 
 commit dad54e0d448a2e8d17fcc4c82e7969092d0d68be (origin/Mi-primer-PR-en-Github, Mi-primer-PR-en-Github)
 Date:   Thu Mar 5 21:30:32
-Este es un commit de prueba
-- Se crea un carpeta con algunos archivos vacíos para aprender sobre el flujo de Git y Github
+    Este es un commit de prueba
+    - Se crea un carpeta con algunos archivos vacíos para aprender sobre el flujo de Git y Github
 
 commit 2a63012548115bec3a1bae0018cb1179020cee4a
 Date:   Thu Mar 5 20:59:53 2026
-Initial commit
-- Creación del repositorio local y se vincula con el repositorio de Github
+    Initial commit
+    - Creación del repositorio local y se vincula con el repositorio de Github
