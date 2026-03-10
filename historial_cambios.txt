@@ -1,3 +1,10 @@
+commit 8e33a443bc1df7a33b6a7a046c783e81151cfe5b (HEAD -> sistema-control-estudiantes)
+Date:   Sun Mar 8 13:32:26 2026
+    Se habilitan acciones para agregar, editar y eliminar estudiantes
+    - Se crean funciones en el módulo actions.py para habilitar las acciones de agregar, editar y eliminar estudiantes
+    - Se hacen varias modificaciones necesarias en el módulo de menu.py para que las acciones funcionen correctamente
+    - En el módulo main.py se hacen modificaciones menores para que las acciones funciones correctamente
+
 commit 16871f3ffc4734dd90346717bd1925733bba8ab7 (HEAD -> sistema-control-estudiantes)
 Date:   Sat Mar 7 20:41:14 2026
     Menú de inputs navegable y funcional
