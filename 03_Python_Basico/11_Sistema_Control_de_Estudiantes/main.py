@@ -10,7 +10,7 @@ def main():
         if ".".join(current_index) in ["0.5","0.6"]:
             data_base = data.index_to_data_manage(current_index,data_base)
         else:
-            data_base = actions.index_to_action(current_index,data_base)
+            actions.index_to_action(current_index,data_base)
         current_index = after_action(current_index)
 
 def after_action(main_index):

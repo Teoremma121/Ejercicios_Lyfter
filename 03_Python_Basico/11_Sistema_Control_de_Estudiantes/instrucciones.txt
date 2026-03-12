@@ -47,15 +47,17 @@ Requerimientos extra (opcionales)
     - Que no se permita ingresar dos estudiantes con el mismo nombre y sección (no duplicados)
     - Tip: Puede hacer una función is_valid_name, is_valid_section y student_exists
 
-
     Notas:
-    - Filtrar por nivel
-    - Buscar un estudiante
-    - Mejores promedios
     - Reprobados
-    - Quiero crear una acción que haga tracking de si se modificó información y no se guardó
+    - Crear advertencia de cuando no existe un archivo de datos
+    - Revisar nombres de la variable data en todas las funciones
+    - Editar búsqueda por sección para indicar las secciones disponibles
     - Trabajar formatos de textos
     - Definir errores para que sea más formal
-    - Crear advertencia de cuando no existe un archivo de datos
-    - Editar búsqueda por sección para indicar las secciones disponibles
-    - Combinar funciones de sección y nivel para comprimir código
+    - Combinar funciones de show students por sección y nivel para comprimir código
+    - Quiero crear una acción que haga tracking de si se modificó información y no se guardó
+    
+    
+    
+ 
+

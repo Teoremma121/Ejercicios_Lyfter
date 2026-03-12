@@ -1,33 +1,6 @@
 class DuplicadosError(Exception):
     pass
 
-index_descriptions = {
-                    "0.1.1":"Agregar estudiantes",
-                    "0.1.2":"Editar un estudiante",
-                    "0.1.3":"Eliminar un estudiante",
-                    "0.2.1.1":"Mostrar estudiantes de una sección/alfabético",
-                    "0.2.1.2":"Mostrar estudiantes de una sección/por promedio",
-                    "0.2.1.3":"Mostrar estudiantes de una sección/resumen materia",
-                    "0.2.2.1":"Mostrar estudiantes de una nivel/alfabético",
-                    "0.2.2.2":"Mostrar estudiantes de una nivel/por promedio",
-                    "0.2.2.3":"Mostrar estudiantes de una nivel/resumen materia",
-                    "0.2.3":"Mostrar la información de un estudiante",
-                    "0.3.1":"Top 3 de una sección",
-                    "0.3.2":"Top 3 de todas las secciones",
-                    "0.3.3":"Top 3 de un nivel",
-                    "0.3.4":"Top 3 de todos los niveles",
-                    "0.4.1":"Reprobados de una sección",
-                    "0.4.2":"Reprobados de un nivel",
-                    "0.4.3":"Reprobados de todos los niveles",
-                    "0.5":"Exportar datos",
-                    "0.6":"Importar datos",}
-
-functions = [{
-            'exit':["0.7","0.1.5","0.2.5","0.2.1.5","0.2.1.3.7","0.2.2.5","0.2.2.3.7","0.3.6","0.4.5"],
-            'add-modify-delete':["0.1.1","0.1.2","0.1.3"],
-            'export':["0.5"]
-            }]
-
 indexed_asignatures =   [
                         {'index':1,'esp':"Español",'eng':"Spanish"},
                         {'index':2,'esp':"Inglés",'eng':"English"},
@@ -37,28 +10,29 @@ indexed_asignatures =   [
                         ]
 
 def index_to_action(index,actual_data):
-    data = actual_data
+    import copy
+    data_copy = copy.deepcopy(actual_data)
     joined_index = ".".join(index)
     if joined_index == "exit":
         exit()
     elif index[1] == "1":
         if index[2] == "1":
-            data = add_n_students(data)
+            add_n_students(actual_data)
         elif index[2] == "2":
-            data = modify(data,index)
+            modify(actual_data,index)
         elif index[2] == "3":
-            data = delete_student(data)
+            delete_student(actual_data)
     elif index[1] == "2":
         if index[2] == "1":
-            show_a_section(data,index)
+            show_a_section(data_copy,index)
         elif index[2] == "2":
-            show_a_level(data,index)
-    else:
-        print(index_descriptions[joined_index])
-    return data
+            show_a_level(data_copy,index)
+        elif index[2] == "3":
+            show_a_student(data_copy)
+    elif index[1] == "3":
+        show_best_students(index,data_copy)
 
-def add_n_students(actual_data):
-    data = actual_data
+def add_n_students(data):
     n = input_quantity_of_students()
     for i in range(n):
         student_info = {}
@@ -77,11 +51,9 @@ def add_n_students(actual_data):
             student_info[asignature['eng']]= input_valid_grade(asignature['esp'])
         data.append(student_info)
     print("Se ha agregado correctamente la información de los estudiantes")
-    return data
 
-def delete_student(actual_data):
+def delete_student(data):
     import menu
-    data = actual_data
     index = search_for_a_student(data,"eliminar")
     if index != None:
         print(f"Va a eliminar el estudiante {data[index]['name']} de la sección {data[index]['section']}")
@@ -91,12 +63,11 @@ def delete_student(actual_data):
             print("Se ha eliminado el estudiante")
         else:
             print("No se ha eliminado el estudiante")
-        return data
 
 def show_a_section(data,index):
     section = search_for_a_section(data)
     data = filter_by_section(data,section)
-    data = calculate_avg(data)
+    calculate_avg(data)
     asignature_esp = None
     if index[3] == "3":
         for asignature in indexed_asignatures:
@@ -125,7 +96,7 @@ def show_a_section(data,index):
 def show_a_level(data,index):
     level = search_for_a_level(data)
     data = filter_by_level(data,level)
-    data = calculate_avg(data)
+    calculate_avg(data)
     asignature_esp = None
     if index[3] == "3":
         for asignature in indexed_asignatures:
@@ -150,6 +121,79 @@ def show_a_level(data,index):
             print(f"Nota más alta del nivel en {asignature_esp}: {summary['max']}")
             print(f"Nota más baja del nivel en {asignature_esp}: {summary['min']}")
             print(f"Reprobados en {asignature_esp}: {summary['failed']}")
+
+def show_a_student(data):
+    student_to_show_index = search_for_a_student(data)
+    if student_to_show_index != None:
+        student_info = data[student_to_show_index]
+        print(f"\nNombre: {student_info['name']}, Sección: {student_info['section']}")
+        print("Notas:")
+        total = 0
+        for asignature in indexed_asignatures:
+            print(f"  -{asignature['esp']}: {student_info[asignature['eng']]}")
+            total += float(student_info[asignature['eng']])
+        print(f"Promedio: {round(total/5,2)}")
+
+def show_best_students(index,data):
+    if index[2] == "1":
+        section = search_for_a_section(data)
+        message = f" la sección {section}"
+        data = filter_by_section(data,section)
+        data = calculate_avg(data)
+        data = order_by_avg(data)
+    elif index[2] == "2":
+        message = " cada sección"
+        sections = []
+        for student in data:
+            if student['section'] not in sections:
+                sections.append(student['section'])
+        agrouped_data = {}
+        for section in sections:
+            section_data = []
+            for student in data:
+                if student['section'] == section:
+                    section_data.append(student)
+            section_data = calculate_avg(section_data)
+            section_data = order_by_avg(section_data)
+            agrouped_data[section] = section_data
+    elif index[2] == "3":
+        level = search_for_a_level(data)
+        message = f"l nivel {level}"
+        data = filter_by_level(data,level)
+        data = calculate_avg(data)
+        data = order_by_avg(data)
+    elif index[2] == "4":
+        message = "cada nivel"
+        levels = []
+        for student in data:
+            if student['section'][:-1] not in levels:
+                levels.append(student['section'][:-1])
+        agrouped_data = {}
+        for level in levels:
+            level_data = []
+            for student in data:
+                if student['section'][:-1] == level:
+                    level_data.append(student)
+            level_data = calculate_avg(level_data)
+            level_data = order_by_avg(level_data)
+            agrouped_data[level] = level_data
+    print(f"Mejores promedios de{message}")
+    if index[2] == "1":
+        for i in range(3):
+            print(f"#{i+1}: {data[i]['name']} - {data[i]['avg']}")
+    elif index[2] == "2":
+        for section in sections:
+            print(f"\nSección {section}")
+            for i in range(3):
+                print(f"#{i+1}: {agrouped_data[section][i]['name']} - {agrouped_data[section][i]['avg']}")
+    elif index[2] == "3":
+        for i in range(3):
+            print(f"#{i+1}: {data[i]['name']}, Sección {data[i]['section']} - {data[i]['avg']}")
+    elif index[2] == "4":
+        for level in levels:
+            print(f"\nNivel {level}")
+            for i in range(3):
+                print(f"#{i+1}: {agrouped_data[level][i]['name']}, Sección {agrouped_data[level][i]['section']} - {agrouped_data[level][i]['avg']}")
 
 def index_to_order(index,data,asignature):
     if index[3] == "1":
@@ -187,12 +231,12 @@ def calculate_avg(data):
     return data
 
 def order_by_avg(data):
-    ordered_data = sorted(data,key=lambda x: x["avg"], reverse=True)
-    return ordered_data
+    data = sorted(data,key=lambda x: x["avg"], reverse=True)
+    return data
 
 def order_alphabetically(data):
-    ordered_data = sorted(data,key=lambda x: x["name"].lower())
-    return ordered_data
+    data = sorted(data,key=lambda x: x["name"].lower())
+    return data
 
 def filter_and_order_by_asignature(data,asignature_index):
     filtered_data = []
@@ -220,17 +264,15 @@ def summary_by_asignature(data,asignature):
     summary['avg'] = round(total/len(data),2)
     return summary
 
-def modify(actual_data,menu_index):
-    modified_data = actual_data
-    student_index = search_for_a_student(modified_data,"editar")
+def modify(data,menu_index):
+    student_index = search_for_a_student(data,"editar")
     if student_index != None:
         if menu_index[3] == "1":
-            modified_data[student_index] = edit_name(modified_data,student_index)
+            data[student_index] = edit_name(data,student_index)
         elif menu_index[3] == "2":
-            modified_data[student_index] = edit_section(modified_data,student_index)
+            data[student_index] = edit_section(data,student_index)
         elif menu_index[3] == "3":
-            modified_data[student_index] = edit_grade(modified_data,student_index,menu_index)
-    return modified_data
+            data[student_index] = edit_grade(data,student_index,menu_index)
 
 def edit_name(data,index):
     student_info = data[index]
@@ -264,12 +306,12 @@ def edit_section(data,index):
 
 def edit_grade(data,student_index,menu_index):
     student_info = data[student_index]
-    new_grade = input_valid_grade(indexed_asignatures[int(menu_index[4])],"nueva ")
     for asignature in indexed_asignatures:
-        if asignature['index'] == [int(menu_index[4])]:
-            student_info[asignature['eng']] = new_grade
-            print(f"Se ha modificado la nota de {asignature['esp']}")
-            break
+        if asignature['index'] == int(menu_index[4]):
+            esp_asignature = asignature['esp']
+            eng_asignature = asignature['eng']
+    student_info[eng_asignature] = input_valid_grade(esp_asignature,"nueva ")
+    print(f"Se ha modificado la nota de {esp_asignature}")
     return student_info
 
 def search_for_a_student(data,message="buscar"):

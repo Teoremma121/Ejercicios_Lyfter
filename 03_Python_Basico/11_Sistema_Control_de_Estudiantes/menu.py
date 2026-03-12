@@ -1,26 +1,37 @@
-# - Agregar, eliminar o editar información de estudiantes
-#   - Agregar estudiante
-#   - Editar estudiante
-#   - Eliminar estudiante
-# - Ver la información de los estudiantes
-#   - Ver la información de una sección
-#       - Mostrar estudiantes por orden alfabético
-#       - Mostrar estudiantes por orden de promedio
-#       - Mostrar resumen por materia
-#   - Ver la información de un nivel (7mo, 8vo, 9no, etc)
-#       - BIS
-#   - Ver la información de un estudiante 
-# - Ver los mejores 3 promedios de estudiante
-#       - De una sección
-#       - De cada una de las secciones
-#       - De un nivel
-#       - De cada uno los niveles
-# - Ver resumen de estudiantes reprobados
-#       - De una sección
-#       - De un nivel
-#       - De todos los niveles
-# - Exportar datos a un archivo CSV
-# - Importar datos desde un archivo CSV
+# 0: Home
+#   0.1: Agregar, eliminar o editar información de estudiantes
+#       0.1.1: Agregar estudiantes
+#       0.1.2: Editar un estudiante
+#           0.1.2.1: Nombre
+#           0.1.2.2: Sección
+#           0.1.2.3: Notas
+#               0.1.2.3.1: Español
+#               0.1.2.3.2: Inglés
+#               0.1.2.3.3: Estudios Sociales
+#               0.1.2.3.4: Ciencias
+#               0.1.2.3.5: Matemáticas
+#       0.1.3: Eliminar un estudiante
+#   0.2: Ver la información de los estudiantes
+#       0.2.1: Mostrar la información de una sección
+#           0.2.1.1: Mostrar estudiantes por orden alfabético
+#           0.2.1.2: Mostrar estudiantes por orden de promedios
+#           0.2.1.3: Mostrar resumen por materia
+#       0.2.2: Mostrar la información de un nivel (7mo, 8vo, etc)
+#           0.2.2.1: Mostrar estudiantes por orden alfabético
+#           0.2.2.2: Mostrar estudiantes por orden de promedios
+#           0.2.2.3: Mostrar resumen por materia
+#       0.2.3: Mostrar la información de un estudiante
+#   0.3: Ver los mejores 3 promedios de estudiante
+#       0.3.1: Mostrar el top 3 de una sección
+#       0.3.2: Mostrar el top 3 para cada una de las secciones
+#       0.3.3: Mostrar el top 3 para un nivel (7mo, 8vo, etc)
+#       0.3.4: Mostrar el top 3 para cada uno de los niveles
+#   0.4: Ver resumen de estudiantes reprobados
+#       0.4.1: Mostrar los estudiantes reprobados de una sección
+#       0.4.2: Mostrar los estudiantes reprobados de un nivel (7mo, 8vo, etc)
+#       0.4.3: Mostrar los estudiantes reprobados de todos los niveles
+#   0.5: Exportar datos a un archivo CSV
+#   0.6: Importar datos desde un archivo CSV
 
 def navigate_menu(index):
     action = False

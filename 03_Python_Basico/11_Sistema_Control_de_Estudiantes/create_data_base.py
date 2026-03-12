@@ -9,7 +9,14 @@ with open("pjs.txt",'r',encoding='utf-8') as file:
         row = row.replace(","," ")
         names.append(row)
 
-import random
+def random_grade():
+    import random
+    prob = random.random()    
+    if prob < 0.2:           
+        return random.uniform(0, 60)
+    else:
+        return random.uniform(60, 100)
+    
 for i in range(90):
     student = {}
     student['name'] = names[i]
@@ -18,14 +25,8 @@ for i in range(90):
             student['section'] = section
             break
     for asignature in asignatures:
-        student[asignature] = round(random.uniform(0,100),2)
+        student[asignature] = round(random_grade(),2)
     grades.append(student)
-
-# for index,student in enumerate(grades):
-#     print(f"\n{index+1}) Nombre: {student['name']}")
-#     print(f"Sección: {student['section']}")
-#     print(f"Español: {student['Spanish']}")
-#     print(f"Matemáticas: {student['Math']}")
 
 headers = ['name','section','Spanish','English','Socials','Sciences','Math']
 import csv
