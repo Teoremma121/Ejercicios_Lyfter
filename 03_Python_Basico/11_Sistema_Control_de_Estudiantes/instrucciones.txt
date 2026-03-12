@@ -49,13 +49,13 @@ Requerimientos extra (opcionales)
 
 
     Notas:
-    - Agregar confirmación de eliminación de estudiante
-    - Agregar verificación en la cantidad de estudiantes que se quieren agregar
-    - Agregar función de edit_grades
-    - Las nuevas acciones de mostrar debería ser capaz de hacerlas bastante modulares
-        - Funciones de filtro-agrupación
-        - Funciones de info para mostrar
-        - Capaz de combinarlas para no crear tantas funciones distintas
+    - Filtrar por nivel
+    - Buscar un estudiante
+    - Mejores promedios
+    - Reprobados
     - Quiero crear una acción que haga tracking de si se modificó información y no se guardó
     - Trabajar formatos de textos
     - Definir errores para que sea más formal
+    - Crear advertencia de cuando no existe un archivo de datos
+    - Editar búsqueda por sección para indicar las secciones disponibles
+    - Combinar funciones de sección y nivel para comprimir código

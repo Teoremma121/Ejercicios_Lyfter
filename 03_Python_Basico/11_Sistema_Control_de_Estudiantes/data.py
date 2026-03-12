@@ -1,5 +1,3 @@
-headers = ['name','section','Spanish','English','Socials','Sciences','Math']
-
 
 def index_to_data_manage(index,current_data):
     if index[1] == "5":
@@ -10,6 +8,7 @@ def index_to_data_manage(index,current_data):
         return updated_data
 
 def export_data(data):
+    headers = ['name','section','Spanish','English','Socials','Sciences','Math']
     import csv
     with open("notas.csv",'w',encoding='utf-8') as file:
         writer = csv.DictWriter(file, headers)

@@ -1,3 +1,15 @@
+
+    - Edit grades
+    - Se modifica ligeramente search_for_a_studen para que sea multiusos
+
+commit 08a09f5ecb9ae26db1e078784f8dc6c182c2f77e (HEAD -> sistema-control-estudiantes)
+Date:   Tue Mar 10 12:26:38 2026
+    Acciones de importar y exportar. Cambios menores en menu y actions
+    - Se crea una función nueva en el módulo menu.py, llamada builds_index() que ayuda a comprimir y limpiar el código de
+        la función principal navigate_menu()
+    - Se crean en el módulo data.py las funciones de importar y exportar datos desde un archivo CSV
+    - Se cran funciones de edit_name(), edit_section() y search_for_student() para compirimir y limpiar el código del módulo actions.py
+
 commit 8e33a443bc1df7a33b6a7a046c783e81151cfe5b (HEAD -> sistema-control-estudiantes)
 Date:   Sun Mar 8 13:32:26 2026
     Se habilitan acciones para agregar, editar y eliminar estudiantes
