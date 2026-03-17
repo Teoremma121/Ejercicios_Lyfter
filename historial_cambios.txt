@@ -1,3 +1,13 @@
+commit c9a32bd110602700971984d1e4b47fef6c383c49 (HEAD -> sistema-control-estudiantes)
+Date:   Thu Mar 12 16:14:35 2026 -0600
+    Mejores promedios, fix-export_data()
+    - Se agregan las acciones de mostrar los mejores promedios por secciones o niveles, mediante la función
+        show_best_students(). Además se modifica la función index_to_action() para integrar las nuevas
+        acciones en el programa
+    - Se hicieron varios cambios importantes en casi todas las funciones del módulo actions.py para
+        controlar mejor el contenido de la data_base, dado que al ser mutable muchas funciones que no
+        pretendían editarla sí lo hacían. Luego cuando se quería exportar la información, había un error
+        porque los estudiantes-diccionario en la base tenían keys que no pertenecían a los headers designados
 
 commit e7671336e7c22e8987188859ad4e00f6d127dd5c (HEAD -> sistema-control-estudiantes)
 Date:   Wed Mar 11 21:07:19 2026 -0600

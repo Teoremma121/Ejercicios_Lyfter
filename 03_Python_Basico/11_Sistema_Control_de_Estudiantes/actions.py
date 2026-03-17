@@ -31,6 +31,8 @@ def index_to_action(index,actual_data):
             show_a_student(data_copy)
     elif index[1] == "3":
         show_best_students(index,data_copy)
+    elif index[1] == "4":
+        show_failed(index,data_copy)
 
 def add_n_students(data):
     n = input_quantity_of_students()
@@ -195,6 +197,32 @@ def show_best_students(index,data):
             for i in range(3):
                 print(f"#{i+1}: {agrouped_data[level][i]['name']}, Sección {agrouped_data[level][i]['section']} - {agrouped_data[level][i]['avg']}")
 
+def show_failed(index,data):
+    if index[2] == "1":
+        section = search_for_a_section(data)
+        data = filter_by_section(data,section)
+        message = f"estudiantes reprobados de la sección {section}"
+        section_info = ""
+    elif index[2] == "2":
+        level = search_for_a_level(data)
+        data = filter_by_level(data,level)
+        message = f"estudiantes reprobados del nivel {level}"
+    elif index[2] == "3":
+        message = f"todos los estudiantes reprobados"
+    total = len(data)
+    data = filter_failed_students(data)
+    data = sorted(data, key=lambda x: (x['section'], x['name'].lower()))
+    failed_percentage = round(100*len(data)/total,2)
+    print("Mostrando",message)
+    print(f"Porcentaje de reprobados: {failed_percentage} %")
+    for student in data:
+        if index[2] != "1":
+            section_info = f", Sección {student['section']}"
+        print(f"\n -{student['name']}{section_info}")
+        for asignature in indexed_asignatures:
+            if float(student[asignature['eng']]) < 60:
+                print(f"  {asignature['esp']}: {student[asignature['eng']]}")
+
 def index_to_order(index,data,asignature):
     if index[3] == "1":
         data = order_alphabetically(data)
@@ -229,6 +257,15 @@ def calculate_avg(data):
             total += float(student[asignature['eng']])
         data[index]['avg'] = round((total/5),2)
     return data
+
+def filter_failed_students(data):
+    failed_students = []
+    for student in data:
+        for asignature in indexed_asignatures:
+            if float(student[asignature['eng']]) < 60:
+                failed_students.append(student)
+                break
+    return failed_students
 
 def order_by_avg(data):
     data = sorted(data,key=lambda x: x["avg"], reverse=True)

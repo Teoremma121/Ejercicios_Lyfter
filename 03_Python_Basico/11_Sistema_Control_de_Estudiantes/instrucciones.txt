@@ -48,7 +48,6 @@ Requerimientos extra (opcionales)
     - Tip: Puede hacer una función is_valid_name, is_valid_section y student_exists
 
     Notas:
-    - Reprobados
     - Crear advertencia de cuando no existe un archivo de datos
     - Revisar nombres de la variable data en todas las funciones
     - Editar búsqueda por sección para indicar las secciones disponibles
