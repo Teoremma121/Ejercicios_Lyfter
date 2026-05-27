@@ -1,3 +1,9 @@
+commit 06774c85d18f0594689c0c083f108b4ca8bd966e (HEAD -> sistema-control-estudiantes)
+Date:   Mon Mar 16 18:23:05 2026 -0600
+    Ver Estudiantes Reprobados
+    - Se agregan las funciones y la lógica al módulo actions.py para hacer posibles las acciones
+        de ver estudiantes reprobados en el programa
+
 commit c9a32bd110602700971984d1e4b47fef6c383c49 (HEAD -> sistema-control-estudiantes)
 Date:   Thu Mar 12 16:14:35 2026 -0600
     Mejores promedios, fix-export_data()

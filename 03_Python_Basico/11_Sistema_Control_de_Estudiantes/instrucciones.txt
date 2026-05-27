@@ -41,7 +41,7 @@ Requerimientos extra (opcionales)
 - Mostrar estudiantes reprobados, enlistando todos los estudiantes que tengan al menos una materia con nota menor a 60.
     - Añada una opción al menú: Ver estudiantes reprobados
     - Muestre el nombre, sección y las materias reprobadas con sus notas
-- Mejore el sistema agregando el siguiente manejo de errores:
+- Mejore el sistema agregando el iguiente manejo de errores:
     - Que el nombre completo no esté vacío ni tenga números
     - Que la sección siga el formato válido (ejemplo: "10A", "11B", etc.)
     - Que no se permita ingresar dos estudiantes con el mismo nombre y sección (no duplicados)
@@ -53,7 +53,7 @@ Requerimientos extra (opcionales)
     - Editar búsqueda por sección para indicar las secciones disponibles
     - Trabajar formatos de textos
     - Definir errores para que sea más formal
-    - Combinar funciones de show students por sección y nivel para comprimir código
+    - Combinar funciones de show stusdents por sección y nivel para comprimir código
     - Quiero crear una acción que haga tracking de si se modificó información y no se guardó
     
     
