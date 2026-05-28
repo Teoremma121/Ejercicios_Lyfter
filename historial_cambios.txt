@@ -1,3 +1,15 @@
+commit caffdb7ce764398b703dd4e968f9b6b265ca5efb (HEAD -> sistema-control-estudiantes)
+Date:   Wed May 27 16:54:37 2026 -0600
+    Restart
+    - Luego de una pausa en mis estudios decido reiniciar este proyecyo, con el fin de repasar los
+    conocimientos. Además, al proyecto original le hice muchas adiciones personales más allá
+    de los requisitos de la entrega. El código se hizo grande y complejo de editar/gestionar
+    Prefiero iniciar de cero, limitarme a lo solicitado en las instrucciones, crean un código
+    simplificado y más apropiado para mis habilidades actuales con la programación
+    - Creé una subcarpeta llamada Proyecto Abandonado para conservar las ideas que tuve
+    en el proyecto original para utilizar de guía en el nuevo
+    - Creé nuevos módulos vacíos de main.py, menu.py, actions.py, data.py
+
 commit 06774c85d18f0594689c0c083f108b4ca8bd966e (HEAD -> sistema-control-estudiantes)
 Date:   Mon Mar 16 18:23:05 2026 -0600
     Ver Estudiantes Reprobados
