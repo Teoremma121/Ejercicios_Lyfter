@@ -1,28 +1,142 @@
+commit ##
+Date:
+    Correcciones #1
+    - La función de mostrar top 3 promedios de estudiantes ahora funciona sin errores
+    cuando hay menos de 3 estudiantes en la base de datos
+    - Cuando se desea usar alguna función relacionada a mostrar información de estudiantes y
+    la base de datos está vacía, un mensaje se lo indica a la persona usuaria
+    - Dicha comprobación evita el error de intentar calcular el promedio de promedios cuando
+    no hay estudiantes todavía en la base. Si no hay estudiantes, se muestra el mensaje
+    y no se ejecuta la función solicitada, ni la de promedios ni ninguna otra función 
+    que dependa de los estudiantes cargados en la base
+    - La función de mostrar estudiantes reprobados ahora muestra un mensaje de:
+    "No hay estudiantes reprobados", de ser ese el caso
+
+commit c14110d0573af310cbd3896488f5617d02d8ba5a (HEAD -> sistema-control-estudiantes)
+Date:   Thu May 28 17:56:32 2026 -0600
+    Proyecto Finalizado
+    - Se completa el proyecto cumpliendo con todos los requisitos y recomendaciones de las instrucciones
+
+commit caffdb7ce764398b703dd4e968f9b6b265ca5efb (HEAD -> sistema-control-estudiantes)
+Date:   Wed May 27 16:54:37 2026 -0600
+    Restart
+    - Luego de una pausa en mis estudios decido reiniciar este proyecyo, con el fin de repasar los
+    conocimientos. Además, al proyecto original le hice muchas adiciones personales más allá
+    de los requisitos de la entrega. El código se hizo grande y complejo de editar/gestionar
+    Prefiero iniciar de cero, limitarme a lo solicitado en las instrucciones, crean un código
+    simplificado y más apropiado para mis habilidades actuales con la programación
+    - Creé una subcarpeta llamada Proyecto Abandonado para conservar las ideas que tuve
+    en el proyecto original para utilizar de guía en el nuevo
+    - Creé nuevos módulos vacíos de main.py, menu.py, actions.py, data.py
+
+commit 06774c85d18f0594689c0c083f108b4ca8bd966e (HEAD -> sistema-control-estudiantes)
+Date:   Mon Mar 16 18:23:05 2026 -0600
+    Ver Estudiantes Reprobados
+    - Se agregan las funciones y la lógica al módulo actions.py para hacer posibles las acciones
+        de ver estudiantes reprobados en el programa
+
+commit c9a32bd110602700971984d1e4b47fef6c383c49 (HEAD -> sistema-control-estudiantes)
+Date:   Thu Mar 12 16:14:35 2026 -0600
+    Mejores promedios, fix-export_data()
+    - Se agregan las acciones de mostrar los mejores promedios por secciones o niveles, mediante la función
+        show_best_students(). Además se modifica la función index_to_action() para integrar las nuevas
+        acciones en el programa
+    - Se hicieron varios cambios importantes en casi todas las funciones del módulo actions.py para
+        controlar mejor el contenido de la data_base, dado que al ser mutable muchas funciones que no
+        pretendían editarla sí lo hacían. Luego cuando se quería exportar la información, había un error
+        porque los estudiantes-diccionario en la base tenían keys que no pertenecían a los headers designados
+
+commit e7671336e7c22e8987188859ad4e00f6d127dd5c (HEAD -> sistema-control-estudiantes)
+Date:   Wed Mar 11 21:07:19 2026 -0600
+    Ver estudiantes (por sección, por nivel)
+    - Se modifica ligeramente search_for_a_student() para que sea multiusos
+    - Se agregan las acciones de mostrar estudiantes de una sección o un nivel, ordenados alfabéticamente, por
+        promedios o mostrando el resumen de una materia. Se crean una serie de funciones para esto en el
+        módulo actions.py. Además se modifica ligeramente la función index_to_action para integrar
+        estas nuevas acciones en la lógica del programa.
+
+commit 08a09f5ecb9ae26db1e078784f8dc6c182c2f77e (HEAD -> sistema-control-estudiantes)
+Date:   Tue Mar 10 12:26:38 2026
+    Acciones de importar y exportar. Cambios menores en menu y actions
+    - Se crea una función nueva en el módulo menu.py, llamada builds_index() que ayuda a comprimir y limpiar el código de
+        la función principal navigate_menu()
+    - Se crean en el módulo data.py las funciones de importar y exportar datos desde un archivo CSV
+    - Se cran funciones de edit_name(), edit_section() y search_for_a_student() para compirimir y limpiar el código del módulo actions.py
+
+commit 8e33a443bc1df7a33b6a7a046c783e81151cfe5b (HEAD -> sistema-control-estudiantes)
+Date:   Sun Mar 8 13:32:26 2026
+    Se habilitan acciones para agregar, editar y eliminar estudiantes
+    - Se crean funciones en el módulo actions.py para habilitar las acciones de agregar, editar y eliminar estudiantes
+    - Se hacen varias modificaciones necesarias en el módulo de menu.py para que las acciones funcionen correctamente
+    - En el módulo main.py se hacen modificaciones menores para que las acciones funciones correctamente
+
+commit 16871f3ffc4734dd90346717bd1925733bba8ab7 (HEAD -> sistema-control-estudiantes)
+Date:   Sat Mar 7 20:41:14 2026
+    Menú de inputs navegable y funcional
+    - Se crean los módulos menu.py, actions.py, data.py, main.py
+    - En el módulo menu.py se desarrolló toda la lógica para que el usuario pueda navegar
+        a través de los menú hasta ejecutar alguna función del programa
+    - En el módulo actions.py se agrega el diccionario index_descriptions y la función index_to_action()
+        para relacionar el índice seleccionado por el usuario con la acción respectiva
+    - De momento index_to_action solo ejecuta la acción de SALIR. La lógica de las demás acciones
+        se agregará conforme se implementen las funciones de cada acción
+    - El módulo main() contiene el ciclo de principal de ejecución del programa que consiste en:
+        > Convocar el menú
+        > Ejecutar una acción
+        > Consultar al usuario si quiere salir o ejecutar otra acción
+        > El programa se cierra o vuelve a iniciar el ciclo
+
+commit 3fb261c71c5abfccba8602627c386eea668679fd (origin/main, origin/HEAD, main)     
+Merge: da1bdb7 bec0c65
+Date:   Sat Mar 7 15:05:50 2026
+    Merge pull request #4 from Teoremma121/experimentación
+    Se crea el historial de cambios, ejercicios extra de Git
+    - Se hace merge en la rama principal con los cambios efectuados en la rama ejercicios extra de Git
+
+commit da1bdb7dfb40ead1517a70f99e55471c7db13b2e
+Merge: a56ad4f 4c5f0b3
+Date:   Sat Mar 7 15:03:28 2026
+Merge pull request #3 from Teoremma121/fix-errores-menores
+    Fix menor en archivo Manejo_de_JSON_EPE.py
+    - Se hace merge en la rama principal con los cambios efectuados en la rama fix-errores-menores
+
+commit 4c5f0b3264d7016ab5c6ecaf0c3760f6e593f29b (origin/fix-errores-menores, fix-errores-menores)
+Date:   Fri Mar 6 13:23:44 2026
+    Fix menor en archivo Manejo_de_JSON_EPE.py
+    - Se cambia el rango de la función ask_for_level() para que sea range(1,101)
+
+commit bec0c6504282dcd6df81f0be21ba4dbd5ba05768 (origin/experimentación, experimentación)
+Date:   Fri Mar 6 13:11:49 2026
+    Se crea el historial de cambios, ejercicios extra de Git
+    - Se crea el arhivo historial_cambios.txt, que funciona como change_log
+
 commit a56ad4f132475585d0eeb55d67cebdc6d56d35b1 (HEAD -> main, origin/main, origin/HEAD)
+Merge: 32721a2 36cee77
 Date:   Fri Mar 6 12:49:32 2026
 Merge pull request #2 from Teoremma121/past-exercises
-Se agregan al directorio los ejercicios previamente entregados y revisados
-- Se hace merge en la rama principal con los cambios efectuados en la rama past-exercises
+    Se agregan al directorio los ejercicios previamente entregados y revisados
+    - Se hace merge en la rama principal con los cambios efectuados en la rama past-exercises
 
 commit 36cee7799f32a4e96bb3651170bad637251bf9c9 (origin/past-exercises, past-exercises)
 Date:   Thu Mar 5 23:37:40 2026
-Se agregan al directorio los ejercicios ya entregados y revisados
-- Se crea la estructura de directorios para compilar en el repositorio los ejercicios realizados hasta el momento
-- Se agregan los archivos en sus respectivos directorios
-- Se elimina la carpeta Mi_primer_PR que se había creado para aprender sobre Git y Github
+    Se agregan al directorio los ejercicios ya entregados y revisados
+    - Se crea la estructura de directorios para compilar en el repositorio los ejercicios realizados hasta el momento
+    - Se agregan los archivos en sus respectivos directorios
+    - Se elimina la carpeta Mi_primer_PR que se había creado para aprender sobre Git y Github
 
 commit 32721a2c902d57546055e66aeecb82271cb38a27
+Merge: 2a63012 dad54e0
 Date:   Thu Mar 5 21:53:58 2026
-Merge pull request #1 from Teoremma121/Mi-primer-PR-en-Github
-Mi primer PR en Github
-- Se hace merge en la rama principal con los cambios de la rama "Mi-Primer-PR-en-Github"
+    Merge pull request #1 from Teoremma121/Mi-primer-PR-en-Github
+    Mi primer PR en Github
+    - Se hace merge en la rama principal con los cambios de la rama "Mi-Primer-PR-en-Github"
 
 commit dad54e0d448a2e8d17fcc4c82e7969092d0d68be (origin/Mi-primer-PR-en-Github, Mi-primer-PR-en-Github)
 Date:   Thu Mar 5 21:30:32
-Este es un commit de prueba
-- Se crea un carpeta con algunos archivos vacíos para aprender sobre el flujo de Git y Github
+    Este es un commit de prueba
+    - Se crea un carpeta con algunos archivos vacíos para aprender sobre el flujo de Git y Github
 
 commit 2a63012548115bec3a1bae0018cb1179020cee4a
 Date:   Thu Mar 5 20:59:53 2026
-Initial commit
-- Creación del repositorio local y se vincula con el repositorio de Github
+    Initial commit
+    - Creación del repositorio local y se vincula con el repositorio de Github
