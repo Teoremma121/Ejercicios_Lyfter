@@ -1,3 +1,22 @@
+commit ##
+Date:
+    Correcciones #1
+    - La función de mostrar top 3 promedios de estudiantes ahora funciona sin errores
+    cuando hay menos de 3 estudiantes en la base de datos
+    - Cuando se desea usar alguna función relacionada a mostrar información de estudiantes y
+    la base de datos está vacía, un mensaje se lo indica a la persona usuaria
+    - Dicha comprobación evita el error de intentar calcular el promedio de promedios cuando
+    no hay estudiantes todavía en la base. Si no hay estudiantes, se muestra el mensaje
+    y no se ejecuta la función solicitada, ni la de promedios ni ninguna otra función 
+    que dependa de los estudiantes cargados en la base
+    - La función de mostrar estudiantes reprobados ahora muestra un mensaje de:
+    "No hay estudiantes reprobados", de ser ese el caso
+
+commit c14110d0573af310cbd3896488f5617d02d8ba5a (HEAD -> sistema-control-estudiantes)
+Date:   Thu May 28 17:56:32 2026 -0600
+    Proyecto Finalizado
+    - Se completa el proyecto cumpliendo con todos los requisitos y recomendaciones de las instrucciones
+
 commit caffdb7ce764398b703dd4e968f9b6b265ca5efb (HEAD -> sistema-control-estudiantes)
 Date:   Wed May 27 16:54:37 2026 -0600
     Restart

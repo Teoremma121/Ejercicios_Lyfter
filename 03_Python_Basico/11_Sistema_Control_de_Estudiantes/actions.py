@@ -11,18 +11,20 @@ indexed_asignatures =   [
                         ]
 
 def index_to_action(index,data):
-    if index == "1":
+    if index not in ["1","9"] and check_any_data(data):
+        match index:
+            case "2":
+                show_info(data)
+            case "3":
+                show_top_students(data)
+            case "4":
+                show_total_avg(data)
+            case "5":
+                show_failed_students(data)
+            case "6":
+                delete_student(data)
+    elif index == "1":
         add_n_students(data)
-    elif index == "2":
-        show_info(data)
-    elif index == "3":
-        show_top_students(data)
-    elif index == "4":
-        show_total_avg(data)
-    elif index == "5":
-        show_failed_students(data)
-    elif index == "6":
-        delete_student(data)
     elif index == "9":
         exit()
 
@@ -61,9 +63,9 @@ def show_top_students(data):
     calculate_avg(temporal_data)
     temporal_data = order_by_avg(temporal_data)
     print("\n--Mostrando estudiantes con las mejores notas promedio:--\n")
-    for i in range(3):
-        student_info = temporal_data[i]
-        print(f"#{i+1}. {student_info['name']}, Sección: {student_info['section']}, Nota Promedio: {student_info['avg']}")
+    for index, student in enumerate(temporal_data):
+        if index <= 2:
+            print(f"#{index+1}. {student['name']}, Sección: {student['section']}, Nota Promedio: {student['avg']}")
 
 def show_total_avg(data):
     from copy import deepcopy
@@ -97,15 +99,22 @@ def delete_student(data):
         print("\n--En la base de datos no existe un estudiante con el nombre y la sección digitados--")
 
 def show_failed_students(data):
-    print("\n--Mostrando los estudiantes rebrobados--")
+    failed_students = []
     for student in data:
         for asignature in indexed_asignatures:
             if float(student[asignature['eng']]) < 60:
-                print(f"\n-{student['name']}, Sección {student['section']}")
-                for asign in indexed_asignatures:
-                    if float(student[asign['eng']]) < 60:
-                        print(f"---> {asign['esp']}: {student[asign['eng']]}")
+                failed_students.append(student)
                 break
+    if failed_students == []:
+        print("\n--No hay ningún estudiante con asignaturas reprobadas--")
+    else:
+        print("\n--Mostrando los estudiantes reprobados--")
+        for student in failed_students:
+            print(f"\n-{student['name']}, Sección {student['section']}")
+            for asignature in indexed_asignatures:
+                if float(student[asignature['eng']]) < 60:
+                    print(f"---> {asignature['esp']}: {student[asignature['eng']]}")
+                
 
 def input_quantity_of_students():
     valid_quantity = False
@@ -196,4 +205,9 @@ def find_student(name, section, data):
                 return i, True
     return None, False
 
-
+def check_any_data(data):
+    if data == []:
+        print("--Aún no hay registros de estudiantes en la base de datos--")
+        return False
+    else:
+        return True
