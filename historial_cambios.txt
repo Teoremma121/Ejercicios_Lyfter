@@ -1,5 +1,13 @@
-commit ##
-Date:
+commit b77e422a5637ba61414cbfb57756d523b31f3939 (HEAD -> ejercicios-OOP, origin/main, origin/HEAD, main)
+Merge: 3fb261c fab816d
+Author: Teoremma121 <epiedra121@gmail.com>
+Date:   Sat May 30 16:51:26 2026 -0600
+    Merge pull request #5 from Teoremma121/sistema-control-estudiantes
+    - Se hace merge en la rama principal con los cambios efectuados en la rama sistema/control/estudiantes
+    - Sistema control estudiantes
+
+commit fab816d77d0c67c977fb20f7b1f2fdd9603f503b (origin/sistema-control-estudiantes, sistema-control-estudiantes)
+Date: Fri May 29 18:40:58 2026 -0600
     Correcciones #1
     - La función de mostrar top 3 promedios de estudiantes ahora funciona sin errores
     cuando hay menos de 3 estudiantes en la base de datos
