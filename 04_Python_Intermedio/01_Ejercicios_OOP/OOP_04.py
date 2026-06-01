@@ -33,7 +33,7 @@ class Torso:
     def __init__(self, head, right_arm, left_arm):
         self.head = head
         self.rightarm = right_arm
-        self.lefarm = left_arm
+        self.leftarm = left_arm
 
 class Human:
     def __init__(self, torso, right_leg, left_leg):
@@ -43,13 +43,13 @@ class Human:
 
 right_hand = Hand()
 left_hand = Hand()
-righ_foot = Foot()
-lef_foot = Foot()
+right_foot = Foot()
+left_foot = Foot()
 head = Head()
 right_arm = Arm(right_hand)
 left_arm = Arm(left_hand)
-right_leg = Leg(righ_foot)
-left_leg = Leg(lef_foot)
+right_leg = Leg(right_foot)
+left_leg = Leg(left_foot)
 torso = Torso(head, right_arm, left_arm)
-Human = Human(torso, right_leg, left_leg)
+human = Human(torso, right_leg, left_leg)
 

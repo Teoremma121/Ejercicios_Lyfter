@@ -12,8 +12,8 @@ class Person():
 		self.age = age
 
 class Bus():
-    passengers = []
     def __init__(self, max_passengers):
+        self.passengers = []
         self.max_passengers = max_passengers
     
     def passenger_gets_on(self,person):
