@@ -1,5 +1,26 @@
-commit ##
+commit
 Date:
+    Correcciones #1
+    - En el programa 02: el atributo de lista "passengers" estaba definido a nivel de la clase Bus, de manera
+    que todas las instancias de Bus compartían la misma lista. Ahora se define passengers en el constructor __init__
+    - En el programa 04: existían algunos errores de typing como letras faltantes en nombres de variables y atributos de clase.
+    Se corrigen dichos errores.
+
+commit b78da95413568b1b819a9b748f9b438f0a13a69a (HEAD -> ejercicios-OOP, origin/ejercicios-OOP)
+Date:   Sat May 30 19:40:01 2026 -0600
+    Ejercicios Finalizados
+    - Se completan los 4 programas solicitados como parte de los ejercicios para poner
+    en práctica los conocimientos adquiridos sobre Programación Orientada a Objetos OOP
+
+commit b77e422a5637ba61414cbfb57756d523b31f3939 (HEAD -> ejercicios-OOP, origin/main, origin/HEAD, main)
+Merge: 3fb261c fab816d
+Date:   Sat May 30 16:51:26 2026 -0600
+    Merge pull request #5 from Teoremma121/sistema-control-estudiantes
+    - Se hace merge en la rama principal con los cambios efectuados en la rama sistema/control/estudiantes
+    - Sistema control estudiantes
+
+commit fab816d77d0c67c977fb20f7b1f2fdd9603f503b (origin/sistema-control-estudiantes, sistema-control-estudiantes)
+Date: Fri May 29 18:40:58 2026 -0600
     Correcciones #1
     - La función de mostrar top 3 promedios de estudiantes ahora funciona sin errores
     cuando hay menos de 3 estudiantes en la base de datos

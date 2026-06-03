@@ -1,0 +1,6 @@
+Duplique el proyecto Sistema de Control de Estudiantes y modifíquelo para usar objetos para guardar la información de los estudiantes (creando una clase de Student).
+  -Hay que cambiar los estudiantes de diccionarios a objetos.
+  -Hay que convertir la data del csv (que viene por defecto en formato de diccionario) a objetos al importarla.
+  -Hay que convertir los objetos a diccionarios para poder exportarlos a csv.
+  -Hay que modificar el acceso a los keys para accesar a atributos.
+       student[’Name’] → student.name
