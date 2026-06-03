@@ -18,9 +18,8 @@ class User(ABC):
         self.permissions = {'create':False,'delete':False,'edit':False,'read':False}
 
     @abstractmethod
-    def get_role(self,role):
-        self.__class__ = role
-        self.__init__(self.name)
+    def get_role(self):
+        return None
     
     @abstractmethod
     def has_permission(self,permission):
@@ -34,8 +33,8 @@ class AdminUser(User):
         self.permissions['edit'] = True
         self.permissions['read'] = True
     
-    def get_role(self,role):
-        super().get_role(role)
+    def get_role(self):
+        return "Admin"
 
     def has_permission(self, permission):
         return super().has_permission(permission)
@@ -48,33 +47,25 @@ class RegularUser(User):
         self.permissions['edit'] = False
         self.permissions['read'] = True
     
-    def get_role(self,role):
-        super().get_role(role)
+    def get_role(self):
+        return "Regular"
 
     def has_permission(self,permission):
         return super().has_permission(permission)
 
 user1 = RegularUser("Ana")
 print(f"Nombre: {user1.name}")
-print(f"Rol: {type(user1).__name__}")
+print(f"Rol: {user1.get_role()}")
 print(f"Permiso para crear: {user1.has_permission('create')}")
 print(f"Permiso para borrar: {user1.has_permission('delete')}")
 print(f"Permiso para editar: {user1.has_permission('edit')}")
 print(f"Permiso para leer: {user1.has_permission('read')}")
 
-user1.get_role(AdminUser)
-print(f"\nNombre: {user1.name}")
-print(f"Nuevo Rol: {type(user1).__name__}")
-print(f"Permiso para crear: {user1.has_permission('create')}")
-print(f"Permiso para borrar: {user1.has_permission('delete')}")
-print(f"Permiso para editar: {user1.has_permission('edit')}")
-print(f"Permiso para leer: {user1.has_permission('read')}")
-
-user1.get_role(RegularUser)
-print(f"\nNombre: {user1.name}")
-print(f"Nuevo Rol: {type(user1).__name__}")
-print(f"Permiso para crear: {user1.has_permission('create')}")
-print(f"Permiso para borrar: {user1.has_permission('delete')}")
-print(f"Permiso para editar: {user1.has_permission('edit')}")
-print(f"Permiso para leer: {user1.has_permission('read')}")
+user2 = AdminUser("Luis")
+print(f"Nombre: {user2.name}")
+print(f"Rol: {user2.get_role()}")
+print(f"Permiso para crear: {user2.has_permission('create')}")
+print(f"Permiso para borrar: {user2.has_permission('delete')}")
+print(f"Permiso para editar: {user2.has_permission('edit')}")
+print(f"Permiso para leer: {user2.has_permission('read')}")
 

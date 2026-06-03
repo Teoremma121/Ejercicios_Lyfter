@@ -13,7 +13,8 @@ class MinimumBalanceError(Exception):
     pass
 
 class BankAccount():
-    balance = 0
+    def __init__(self):
+        self.balance = 0
 
     def deposit_money(self, amount):
         self.balance += amount
@@ -24,8 +25,9 @@ class BankAccount():
         print(f"Se retiró una cantidad de ${amount} de la cuenta")
 
 
-class SavingAccount(BankAccount):
+class SavingsAccount(BankAccount):
     def __init__(self, min_balance):
+        super().__init__()
         self.min_balance = min_balance
         print(f"Se creó una cuenta de ahorros con un balance mínimo de ${min_balance}")
         self.deposit_money(min_balance)
@@ -40,7 +42,7 @@ class SavingAccount(BankAccount):
             print(f"Error: {e}")
             print(f"La cantidad máxima que puede retirar actualmente es de: {self.balance - self.min_balance}")
 
-my_personal_account = SavingAccount(300)
+my_personal_account = SavingsAccount(300)
 my_personal_account.deposit_money(200)
 print(f"El saldo actual de la cuenta es: ${my_personal_account.balance}")
 my_personal_account.withdraw_money(300)

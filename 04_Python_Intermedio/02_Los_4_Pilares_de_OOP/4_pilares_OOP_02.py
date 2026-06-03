@@ -6,6 +6,7 @@
 #   - Cada una de estas necesita los atributos respectivos para poder calcular el área y el perímetro.
 
 from abc import ABC, abstractmethod
+from math import pi
 
 class Shape(ABC):
     @abstractmethod
@@ -21,12 +22,10 @@ class Circle(Shape):
         self.radius = radius
     
     def calculate_perimeter(self):
-        from math import pi
         perimeter = 2*pi*self.radius
         return perimeter
     
     def calculate_area(self):
-        from math import pi
         area = pi*self.radius**2
         return area
     
