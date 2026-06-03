@@ -9,7 +9,9 @@
 #   - Valide que ningún valor sea negativo. Si lo es, lance una excepción con un mensaje adecuado
 
 class Rectangle():
-    def __init__(self,width = input("Ingrese el ancho: "),height = input("Ingrese la altura: ")):
+    def __init__(self):
+        width = input("Ingrese el ancho: ")
+        height = input("Ingrese la altura: ")
         if (int(width) < 0) or (int(height) < 0):
             raise ValueError("Existe un valor negativo, los valores deben ser positivos")
         self.width = int(width)
