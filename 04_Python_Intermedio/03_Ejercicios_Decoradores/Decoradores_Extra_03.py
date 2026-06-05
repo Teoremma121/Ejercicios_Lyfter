@@ -24,7 +24,7 @@ def validate_numbers(func):
             for value in args:
                 if not isinstance(value, (int, float)):
                     raise ValueError(f"Uno de los argumentos no es un número")
-            func(*args)
+            return func(*args)
         except ValueError as e:
             print(f"Error: {e}")
             print("-Ambos argumentos deben ser números")

@@ -8,7 +8,9 @@ def print_and_return(func):
     def wrapper(*args):
         for i in range(len(args)):
             print(f"-Arg {i+1}: {args[i]}")
-        return func(*args)
+        result = func(*args)
+        print(result) 
+        return result
     return wrapper
 
 @print_and_return
@@ -16,8 +18,7 @@ def calculate_total_points(singles,doubles,triples):
     total = 20*(singles + 2*doubles + 3*triples)
     return total
 
-value = calculate_total_points(7,4,1)
-print(value)
+calculate_total_points(7,4,1)
 
 @print_and_return
 def add_words(*args):
@@ -26,5 +27,4 @@ def add_words(*args):
         sentence += word + " "
     return sentence
 
-result = add_words("Esto","es","un","ejemplo")
-print(result)
+add_words("Esto","es","un","ejemplo")

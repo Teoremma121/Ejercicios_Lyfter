@@ -14,7 +14,7 @@ def requires_login(func):
     def wrapper(*args):
         if user_logged_in:
             return func(*args)
-        print("Usuario no autenticado")
+        raise Exception("Usuario no autenticado")
     return wrapper
 
 class User():
@@ -56,5 +56,8 @@ user_logged_in = logout()
 print("\n")
 User.register('InfernalToad','peach.and.toad@gmail.com','Mario.is.dumb')
 user_logged_in = User.login('peach.and.toad@gmail.com','DumbMario')
-add_item_to_car("love_poisson")
+try:
+    add_item_to_car("love_poisson")
+except Exception as e:
+    print(f"Error: {e}")
 
