@@ -5,7 +5,7 @@
 
 class Node:
     data: str
-    next_node: "Node"
+    next_node: Node
 
     def __init__(self, data, next_node=None):
         self.data = data
@@ -54,7 +54,7 @@ print("Se agrega al final el nodo C")
 my_queue.enqueue(node_c)
 my_queue.print_structure()
 print("Se comprueba que el atributo next de los nodos si se modifica con el método")
-print(f"Siguiente nodo de B --> {node_b.nextnode.data}")
+print(f"Siguiente nodo de B --> {node_b.next_node.data}")
 print("Se agrega al final el nodo D")
 my_queue.enqueue(node_d)
 my_queue.print_structure()
@@ -62,7 +62,7 @@ print("Se elimina el primer nodo (First In, First Out)")
 my_queue.dequeue()
 my_queue.print_structure()
 print("Se verifica que el nodo A que ya no está en cola no tiene un next asignado")
-print(f"Siguiente nodo de A --> {node_a.nextnode}")
+print(f"Siguiente nodo de A --> {node_a.next_node}")
 print("Se agrega el nodo A al final de la cola")
 my_queue.enqueue(node_a)
 my_queue.print_structure()
