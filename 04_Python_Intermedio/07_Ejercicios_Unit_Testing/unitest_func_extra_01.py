@@ -11,7 +11,6 @@ from func_extra import (addition, avg, celsius_to_fahrenheit)
 #   - Un caso con ceros
 
 class TestMath(unittest.TestCase):
-
     def test_addition_with_positives(self):
         a = 5
         b = 2
