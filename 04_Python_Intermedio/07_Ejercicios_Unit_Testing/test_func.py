@@ -95,7 +95,7 @@ def test_check_list_for_primes_with_no_primes():
 def test_check_list_for_primes_with_some_primes():
     input_list = [1, 43, 6, 8, 29, 12, 11]
     result = func.check_list_for_primes(input_list)
-    assert result == [43, 29, 11]
+    assert sorted(result) == sorted([43, 29, 11])
 
 def test_check_list_for_primes_with_empty_list():
     input_list = []

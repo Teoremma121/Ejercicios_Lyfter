@@ -15,7 +15,7 @@ def avg(nums_list):
     avg = 0
     for n in nums_list:
         total_sum += n
-    if total_sum != 0:
+    if (len(nums_list) != 0) and (total_sum != 0):
         avg = total_sum/len(nums_list)
     return avg
 
