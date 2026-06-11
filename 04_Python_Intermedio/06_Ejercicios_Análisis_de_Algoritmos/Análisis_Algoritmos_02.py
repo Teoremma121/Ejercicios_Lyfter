@@ -1,0 +1,34 @@
+# Ejercicios de Análisis de Algoritmos -- Python Intermedio
+# Emmanuel Piedra Esquivel
+# Ejercicio 02:
+
+# Analice los siguientes algoritmos usando la Big O Notation:
+
+def print_numbers_times_2(numbers_list):
+	for number in numbers_list: # O(n)
+		print(number * 2) # O(n)
+# * Complejiidad del algoritmo: O(n)
+		
+def check_if_lists_have_an_equal(list_a, list_b):
+	for element_a in list_a: # O(n)
+		for element_b in list_b: # O(n^2)
+			if element_a == element_b: # O(n^2)
+				return True # O(1)
+	return False # O(1)
+# * Complejidad del algoritmo: O(n^2)
+
+def print_10_or_less_elements(list_to_print):
+	list_len = len(list_to_print) # O(1)
+	for index in range(min(list_len, 10)): # O(1) -> corre máximo 10 veces
+		print(list_to_print[index]) # O(1)
+# * Complejidad del algoritmo: O(1)
+
+def generate_list_trios(list_a, list_b, list_c):
+	result_list = [] # O(1)
+	for element_a in list_a: # O(n) 
+		for element_b in list_b: # O(n^2)
+			for element_c in list_c: # O(n^3) 
+				result_list.append(f'{element_a} {element_b} {element_c}') # O(n^3)
+	return result_list # O(1)
+# * Complejidad del algoritmo: O(n^3)
+
