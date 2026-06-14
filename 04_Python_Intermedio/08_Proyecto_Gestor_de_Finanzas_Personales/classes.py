@@ -1,4 +1,4 @@
-import persistence as p
+import storage as st
 
 class Finance_Manager():
     movements: list
@@ -7,15 +7,15 @@ class Finance_Manager():
     def __init__(self):
         self.movements = []
         self.categories = []
-        p.check_if_files_exist(self)
+        st.check_if_files_exist(self)
 
     def add_movement(self,type,category,title,amount):
         self.movements.append(Movement(type,category,title,amount))
-        p.write_movements(self)
+        st.write_movements(self)
 
     def create_category(self,name,color):
         self.categories.append(Category(name,color))
-        p.write_categories(self)
+        st.write_categories(self)
 
 class Movement():
     type: str
