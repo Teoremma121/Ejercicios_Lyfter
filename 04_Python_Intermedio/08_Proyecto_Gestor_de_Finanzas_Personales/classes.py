@@ -1,4 +1,5 @@
 import storage as st
+from datetime import datetime
 
 class Finance_Manager():
     movements: list
@@ -9,8 +10,11 @@ class Finance_Manager():
         self.categories = []
         st.check_if_files_exist(self)
 
-    def add_movement(self,type,category,title,amount):
-        self.movements.append(Movement(type,category,title,amount))
+    def add_movement(self,date,type,category,title,amount):
+        if type == 'Gasto':
+            amount = -float(amount)
+        self.movements.append(Movement(date,type,category,title,amount))
+        self.movements = sorted(self.movements,key=lambda move: datetime.strptime(move.date, "%d/%m/%Y"))
         st.write_movements(self)
 
     def create_category(self,name,color):
@@ -18,12 +22,14 @@ class Finance_Manager():
         st.write_categories(self)
 
 class Movement():
+    date: str
     type: str
     category: str
     title: str
     amount: float
 
-    def __init__(self,type,category,title,amount):
+    def __init__(self,date,type,category,title,amount):
+        self.date = date
         self.type = type
         self.category = category
         self.title = title

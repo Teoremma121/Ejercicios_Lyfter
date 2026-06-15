@@ -1,8 +1,11 @@
-type,category,title,amount
-Ingreso,Educación,Beca de Marzo,2000
-Gasto,Comida,Almuerzo lunes,200
-Gasto,Transporte,Pases de bus,150
-Gasto,Educación,Libros,500
-Ingreso,Comida,Pensión de Marzo,300
-Gasto,Salud,Operación de Córneas,5000
-Ingreso,Trabajo,Salario,8000
+date,type,category,title,amount
+11/06/2025,Gasto,Transporte,Pases de bus,-150.0
+06/06/2026,Ingreso,Comida,Pensión de Marzo,300.0
+08/06/2026,Ingreso,Educación,Beca de Marzo,2000.0
+11/06/2026,Gasto,Comida,Almuerzo lunes,-200.0
+11/06/2026,Gasto,Educación,Libros,-500.0
+11/06/2026,Gasto,Entretenimiento,Concierto,-500.0
+15/06/2026,Gasto,Salud,Operación,-2000.0
+30/06/2026,Ingreso,Salud,ROP,1200.0
+11/07/2026,Ingreso,Educación,Beca,2000.0
+12/08/2026,Gasto,Transporte,Gasolina,-500.0

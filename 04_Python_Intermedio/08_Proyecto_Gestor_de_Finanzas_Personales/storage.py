@@ -1,5 +1,5 @@
 import csv
-headers = ['type','category','title','amount']
+headers = ['date','type','category','title','amount']
 
 def check_if_files_exist(manager):
     try:
@@ -13,10 +13,10 @@ def check_if_files_exist(manager):
 
 def write_movements(manager):
     movements_list = []
-    for move_class in manager.movements:
+    for move_object in manager.movements:
         move_dict = {}
         for attribute in headers:
-            move_dict[attribute] = getattr(move_class,attribute)
+            move_dict[attribute] = str(getattr(move_object,attribute))
         movements_list.append(move_dict)
 
     with open("movements.csv", "w", newline="", encoding="utf-8") as file:
@@ -28,8 +28,8 @@ def read_movements(manager):
     with open("movements.csv", "r", encoding="utf-8") as file:
         reader = csv.DictReader(file)
         for row in reader:
-            # row['amount'] = float(row['amount'])
-            manager.add_movement(row['type'],row['category'],row['title'],row['amount'])
+            row['amount'] = abs(float(row['amount']))
+            manager.add_movement(row['date'],row['type'],row['category'],row['title'],str(row['amount']))
 
 def write_categories(manager):
     categories_list = []
