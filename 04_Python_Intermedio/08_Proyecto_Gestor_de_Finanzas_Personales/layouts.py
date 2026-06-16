@@ -1,14 +1,16 @@
 import PySimpleGUI as sg
 from datetime import datetime
 
-def permanent_manager_window(manager,start,end):
+def permanent_manager_window(manager):
+    start = datetime.now().strftime("%d/%m/%Y")
+    end = start
     headers = ["Fecha","Tipo","Categoría","Título","Monto"]    
     sg.theme('Light Blue 1')
     frame_layout1 = [[sg.Text('Fecha inicio:'),sg.Input(size=10,enable_events=True,default_text=start,key='-START-'),sg.CalendarButton('Calendario', target='-START-',format="%d/%m/%Y"),sg.Text('Fecha final:'), sg.Input(size=10,enable_events=True,default_text=end,key='-END-'),sg.CalendarButton('Calendario', target='-END-',format="%d/%m/%Y")],
-                    [sg.Table(values=update_and_filter_movements(manager,start,end), headings=headers, expand_x=True,justification="left",auto_size_columns=True,key='-TABLE-',text_color="#400000")],
-                    [checkbox('Ingresos:'), multiline('-TOT_INCOMES-') , checkbox('Gastos:'), multiline('-TOT_EXPENSES-'), sg.Text('Balance:'), multiline('-BALANCE-')]]
+                    [sg.Table(values=[], headings=headers, expand_x=True,justification="left",auto_size_columns=True,key='-TABLE-',text_color="#400000")],
+                    [checkbox('Ingresos:','-CHECK-INCOMES-'), multiline(0,'-TOT-INCOMES-') , checkbox('Gastos:','-CHECK-EXPENSES-'), multiline(0,'-TOT-EXPENSES-'), sg.Text('Balance:'), multiline(0,'-BALANCE-')]]
 
-    frame_layout2 = [[[sg.Checkbox(cat.name, default=True, key=f'-{cat.name.upper()}-', checkbox_color=cat.color)] for cat in manager.categories]]
+    frame_layout2 = [[[sg.Checkbox(cat.name, default=True, key=f'-CAT-{cat.name.upper()}-', checkbox_color=cat.color, enable_events=True)] for cat in manager.categories]]
 
     frame_layout3 = [[sg.Button('Agregar ingreso', key='-INCOME-'),sg.Button('Agregar gasto', key='-EXPENSE-'),sg.Button('Crear Categoría', key='-CATEGORY-')]]
 
@@ -18,24 +20,13 @@ def permanent_manager_window(manager,start,end):
     window = sg.Window('Gestor de Finanzas Personales', layout, finalize=True)
     return window 
 
-def checkbox(tag):
-    element = sg.Checkbox(tag, default=True)
+def checkbox(tag,key):
+    element = sg.Checkbox(tag, default=True, key=key, enable_events=True)
     return element
 
-def multiline(key):
-    element = sg.Multiline(s=8,no_scrollbar=True,key=key)
+def multiline(value,key):
+    element = sg.Multiline(value,s=8,no_scrollbar=True,key=key)
     return element
-
-def update_and_filter_movements(manager,start,end):
-    rows = [[move.date, move.type, move.category, move.title, move.amount] for move in manager.movements]
-    start = datetime.strptime(start, "%d/%m/%Y")
-    end = datetime.strptime(end, "%d/%m/%Y")
-    filtered_list = []
-    for row in rows:
-        date = datetime.strptime(row[0], "%d/%m/%Y")
-        if (date >= start) and (date <= end):
-            filtered_list.append(row)
-    return filtered_list
 
 def one_shot_movement_window(manager,type):
     date = datetime.now().strftime("%d/%m/%Y")

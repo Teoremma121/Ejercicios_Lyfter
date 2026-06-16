@@ -13,6 +13,8 @@ class Finance_Manager():
     def add_movement(self,date,type,category,title,amount):
         if type == 'Gasto':
             amount = -float(amount)
+        else:
+            amount = float(amount)
         self.movements.append(Movement(date,type,category,title,amount))
         self.movements = sorted(self.movements,key=lambda move: datetime.strptime(move.date, "%d/%m/%Y"))
         st.write_movements(self)
