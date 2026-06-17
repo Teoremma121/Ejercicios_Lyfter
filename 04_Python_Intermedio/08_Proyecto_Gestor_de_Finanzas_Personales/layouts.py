@@ -2,12 +2,10 @@ import PySimpleGUI as sg
 from datetime import datetime
 
 def permanent_manager_window(manager):
-    start = datetime.now().strftime("%d/%m/%Y")
-    end = start
     headers = ["Fecha","Tipo","Categoría","Título","Monto"]    
     sg.theme('Light Blue 1')
-    frame_layout1 = [[sg.Text('Fecha inicio:'),sg.Input(size=10,enable_events=True,default_text=start,key='-START-'),sg.CalendarButton('Calendario', target='-START-',format="%d/%m/%Y"),sg.Text('Fecha final:'), sg.Input(size=10,enable_events=True,default_text=end,key='-END-'),sg.CalendarButton('Calendario', target='-END-',format="%d/%m/%Y")],
-                    [sg.Table(values=[], headings=headers, expand_x=True,justification="left",auto_size_columns=True,key='-TABLE-',text_color="#400000")],
+    frame_layout1 = [[sg.Text('Fecha inicio:'),sg.Input(size=10,enable_events=True,key='-START-'),sg.CalendarButton('Calendario', target='-START-',format="%d/%m/%Y"),sg.Text('Fecha final:'), sg.Input(size=10,enable_events=True,key='-END-'),sg.CalendarButton('Calendario', target='-END-',format="%d/%m/%Y")],
+                    [sg.Table(values=[], headings=headers, expand_x=True,justification="left", auto_size_columns=False,col_widths=[8,7,12,18,9],key='-TABLE-',text_color="#400000")],
                     [checkbox('Ingresos:','-CHECK-INCOMES-'), multiline(0,'-TOT-INCOMES-') , checkbox('Gastos:','-CHECK-EXPENSES-'), multiline(0,'-TOT-EXPENSES-'), sg.Text('Balance:'), multiline(0,'-BALANCE-')]]
 
     frame_layout2 = [[[sg.Checkbox(cat.name, default=True, key=f'-CAT-{cat.name.upper()}-', checkbox_color=cat.color, enable_events=True)] for cat in manager.categories]]
@@ -25,10 +23,10 @@ def checkbox(tag,key):
     return element
 
 def multiline(value,key):
-    element = sg.Multiline(value,s=8,no_scrollbar=True,key=key)
+    element = sg.Multiline(value,s=10,no_scrollbar=True,key=key)
     return element
 
-def one_shot_movement_window(manager,type):
+def add_movement_window(manager,type):
     date = datetime.now().strftime("%d/%m/%Y")
     translator = {'-INCOME-':'Ingreso','-EXPENSE-':'Gasto'}
     layout = [[sg.Text('Tipo', size=(8)), sg.Multiline(translator[type],s=8,no_scrollbar=True,key='-TYPE-',disabled=True)],
@@ -36,13 +34,15 @@ def one_shot_movement_window(manager,type):
                 [sg.Text('Categoría', size=(8)), sg.Combo(values=[[cat.name][0] for cat in manager.categories],key='-CATEGORY-')],
                 [sg.Text('Título', size=(8)), sg.InputText(key='-TITLE-')],
                 [sg.Text('Monto', size=(8)), sg.Input(key='-AMOUNT-')],
+                [sg.Text('',text_color='red',key='-ERROR-')],
                 [sg.Button('Agregar'), sg.Button('Cancelar')]]
     window = sg.Window(f'Agregar {translator[type]}', layout)
     return window
 
-def one_shot_create_category_window():
+def create_category_window():
     layout = [[sg.Text('Categoría', size=(8)), sg.InputText(key='-NAME-')],
                 [sg.ColorChooserButton('Elegir un color', target='-COLOR-'),sg.Text("",size=(2),background_color='white',key='-SAMPLE-'),sg.Input(enable_events=True, size=5, visible=False, key='-COLOR-')],
+                [sg.Text('',text_color='red',key='-ERROR-')],
                 [sg.Button('Crear'), sg.Button('Cancelar')]]
     window = sg.Window(f'Crear Categoría', layout)
     return window

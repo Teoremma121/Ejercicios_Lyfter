@@ -1,11 +1,16 @@
 date,type,category,title,amount
-11/06/2025,Gasto,Transporte,Pases de bus,-150.0
-06/06/2026,Ingreso,Comida,Pensión de Marzo,300.0
-08/06/2026,Ingreso,Educación,Beca de Marzo,2000.0
-11/06/2026,Gasto,Comida,Almuerzo lunes,-200.0
-11/06/2026,Gasto,Educación,Libros,-500.0
-11/06/2026,Gasto,Entretenimiento,Concierto,-500.0
-15/06/2026,Gasto,Salud,Operación,-2000.0
-30/06/2026,Ingreso,Salud,ROP,1200.0
-11/07/2026,Ingreso,Educación,Beca,2000.0
-12/08/2026,Gasto,Transporte,Gasolina,-500.0
+01/06/2026,Gasto,Entretenimiento,Nuevo caballete,-22000.0
+03/06/2026,Ingreso,Entretenimiento,Devolución Paquete Perdido,30000.0
+09/06/2026,Gasto,Salud,Medicamentos,-6000.0
+10/06/2026,Gasto,Entretenimiento,Concierto Laura Paussini,-60000.0
+12/06/2026,Ingreso,Trabajo,Salario,300000.0
+14/06/2026,Gasto,Comida,Diario,-75000.0
+17/06/2026,Gasto,Salud,Examen Patologías,-33000.0
+17/06/2026,Ingreso,Educación,Beca por excelencia,30000.0
+17/06/2026,Gasto,Entretenimiento,Cine - Avatar III,-15000.0
+17/06/2026,Ingreso,Entretenimiento,Devolución Concierto Cancelado,60000.0
+19/06/2026,Gasto,Comida,Pan,-2000.0
+20/06/2026,Gasto,Comida,Tres Leches Spoon,-2000.0
+30/06/2026,Gasto,Educación,Matrícula Universidad,-150000.0
+30/06/2026,Gasto,Salud,Operación - Oftalmología,-60000.0
+30/06/2026,Ingreso,Lotería,Premio menor,15000.0

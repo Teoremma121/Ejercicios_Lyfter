@@ -11,10 +11,9 @@ class Finance_Manager():
         st.check_if_files_exist(self)
 
     def add_movement(self,date,type,category,title,amount):
+        amount = abs(float(amount))
         if type == 'Gasto':
-            amount = -float(amount)
-        else:
-            amount = float(amount)
+            amount = -amount
         self.movements.append(Movement(date,type,category,title,amount))
         self.movements = sorted(self.movements,key=lambda move: datetime.strptime(move.date, "%d/%m/%Y"))
         st.write_movements(self)

@@ -1,6 +1,7 @@
 import PySimpleGUI as sg
 import classes as cl
 import layouts as ly
+import validations as vl
 from datetime import datetime
 
 def main():
@@ -16,6 +17,8 @@ def interface_main_logic(manager):
         end = manager.movements[-1].date
     
     while True:
+        window_1['-START-'].update(start)
+        window_1['-END-'].update(end)
         table_rows = update_movements(manager)
         table_rows = filter_by_date(table_rows,start,end)
         table_rows = filter_by_category(manager,window_1,table_rows)
@@ -27,25 +30,33 @@ def interface_main_logic(manager):
     
         if event != sg.WIN_CLOSED:
             if event in ('-INCOME-','-EXPENSE-'):
-                window_2 = ly.one_shot_movement_window(manager,event)
-                event, values = window_2.read()
-                if (event == 'Agregar') and (len(values) == 6):
-                    manager.add_movement(values['-DATE-'],values['-TYPE-'],values['-CATEGORY-'],values['-TITLE-'],values['-AMOUNT-'])
-                    start = manager.movements[0].date
-                    end = manager.movements[-1].date
-                window_2.close()
+                window_2 = ly.add_movement_window(manager,event)
+                while True:
+                    event, values = window_2.read()
+                    if (event == 'Agregar'):
+                        if vl.validate_add_movement(manager,values,window_2):
+                            manager.add_movement(values['-DATE-'],values['-TYPE-'],values['-CATEGORY-'],values['-TITLE-'],values['-AMOUNT-'])
+                            start = manager.movements[0].date
+                            end = manager.movements[-1].date
+                            window_2.close()
+                            break
+                    if event in ["Cancelar",sg.WIN_CLOSED]:
+                            window_2.close()
+                            break
 
             if event == '-CATEGORY-':
-                window_2 = ly.one_shot_create_category_window()
+                window_2 = ly.create_category_window()
                 while True:
                     event, values = window_2.read()
                     if event == '-COLOR-':
-                        window_2['-SAMPLE-'].update(background_color=values["-COLOR-"])
-                    if (event == 'Crear') and (len(values) == 2):
-                        manager.create_category(values['-NAME-'],values['-COLOR-'])
-                        add_category(window_1,manager)
-                        window_2.close()
-                        break
+                        if values['-COLOR-']:
+                            window_2['-SAMPLE-'].update(background_color=values["-COLOR-"])
+                    if (event == 'Crear'):
+                        if vl.validate_add_category(manager,values,window_2):
+                            manager.create_category(values['-NAME-'],values['-COLOR-'])
+                            add_category(window_1,manager)
+                            window_2.close()
+                            break
                     if event in ['Cancelar',sg.WIN_CLOSED]:
                         window_2.close()
                         break
@@ -134,7 +145,6 @@ def update_total_incomes_expenses_balance(window,rows):
     window['-TOT-INCOMES-'].update(total_incomes)
     window['-TOT-EXPENSES-'].update(total_expenses)
     window['-BALANCE-'].update(total_expenses+total_incomes)
-
 
 
 main()
