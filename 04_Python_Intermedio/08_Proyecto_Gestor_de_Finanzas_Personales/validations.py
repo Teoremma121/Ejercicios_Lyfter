@@ -64,7 +64,6 @@ def validate_date(values,window):
         return False
 
 def validate_amount(values,window):
-
     try:
         amount = float(values['-AMOUNT-'])
         if (values['-TYPE-'] == "Ingreso") and (amount < 0):

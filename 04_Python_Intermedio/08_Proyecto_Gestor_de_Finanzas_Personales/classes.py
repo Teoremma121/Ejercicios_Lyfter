@@ -8,7 +8,10 @@ class Finance_Manager():
     def __init__(self):
         self.movements = []
         self.categories = []
+        self.minor_date = datetime.now().strftime("%d/%m/%Y")
+        self.major_date = self.minor_date
         st.check_if_files_exist(self)
+
 
     def add_movement(self,date,type,category,title,amount):
         amount = abs(float(amount))
@@ -16,6 +19,8 @@ class Finance_Manager():
             amount = -amount
         self.movements.append(Movement(date,type,category,title,amount))
         self.movements = sorted(self.movements,key=lambda move: datetime.strptime(move.date, "%d/%m/%Y"))
+        self.minor_date = self.movements[0].date
+        self.major_date = self.movements[-1].date
         st.write_movements(self)
 
     def create_category(self,name,color):
