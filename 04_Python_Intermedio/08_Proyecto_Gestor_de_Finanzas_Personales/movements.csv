@@ -1,6 +1,7 @@
 date,type,category,title,amount
 13/05/2026,Ingreso,Comida,Regalo de mamá,8000.0
 01/06/2026,Gasto,Entretenimiento,Nuevo caballete,-22000.0
+02/06/2026,Ingreso,Transporte,Viáticos Transporte,30000.0
 03/06/2026,Ingreso,Entretenimiento,Devolución Paquete Perdido,30000.0
 09/06/2026,Gasto,Salud,Medicamentos,-6000.0
 10/06/2026,Gasto,Entretenimiento,Concierto Laura Paussini,-60000.0
@@ -11,6 +12,7 @@ date,type,category,title,amount
 17/06/2026,Gasto,Entretenimiento,Cine - Avatar III,-15000.0
 17/06/2026,Ingreso,Entretenimiento,Devolución Concierto Cancelado,60000.0
 17/06/2026,Gasto,Salud,Suscripción del Gimnasio,-10000.0
+18/06/2026,Gasto,Transporte,Gasolina,-15000.0
 19/06/2026,Gasto,Comida,Pan,-2000.0
 20/06/2026,Gasto,Comida,Tres Leches Spoon,-2000.0
 30/06/2026,Gasto,Educación,Matrícula Universidad,-150000.0

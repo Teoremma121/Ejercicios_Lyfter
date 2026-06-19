@@ -6,7 +6,6 @@ from datetime import datetime
 
 def main():
     fm = cl.Finance_Manager()
-    print(type(fm))
     interface_main_logic(fm)
 
 def interface_main_logic(manager):
@@ -16,9 +15,9 @@ def interface_main_logic(manager):
         event, values = window_1.read()
         if event != sg.WIN_CLOSED:
             if event in ('-INCOME-','-EXPENSE-'):
-                income_or_expense_event(manager,event,values,window_1)
+                show_add_income_or_expense_window_event(manager,event,window_1)
             if event == '-CATEGORY-':
-                create_category_event(manager,event,values,window_1)
+                show_create_category_window_event(manager,window_1)
         else:
             window_1.close()
             break
@@ -32,22 +31,25 @@ def update_main_window(window,manager):
     update_table_colors(window,manager)
     update_total_incomes_expenses_balance(window,table_rows)
 
-def income_or_expense_event(manager,event,values,main_window):
+def show_add_income_or_expense_window_event(manager,event,main_window):
     sub_window = ly.add_movement_window(manager,event)
     while True:
         event, values = sub_window.read()
         if (event == 'Agregar'):
-            if vl.validate_add_movement(manager,values,sub_window):
-                manager.add_movement(values['-DATE-'],values['-TYPE-'],values['-CATEGORY-'],values['-TITLE-'],values['-AMOUNT-'])
-                main_window['-START-'].update(manager.minor_date)
-                main_window['-END-'].update(manager.major_date)
-                sub_window.close()
-                return
+            add_movement_event(manager,values,main_window,sub_window)
+            return
         if event in ["Cancelar",sg.WIN_CLOSED]:
-                sub_window.close()
-                return
+            sub_window.close()
+            return
 
-def create_category_event(manager,event,values,main_window):
+def add_movement_event(manager,values,main_window,sub_window):
+    if vl.validate_add_movement(manager,values,sub_window):
+        manager.add_movement(values['-DATE-'],values['-TYPE-'],values['-CATEGORY-'],values['-TITLE-'],values['-AMOUNT-'])
+        main_window['-START-'].update(manager.minor_date)
+        main_window['-END-'].update(manager.major_date)
+        sub_window.close()
+
+def show_create_category_window_event(manager,main_window):
     sub_window = ly.create_category_window()
     while True:
         event, values = sub_window.read()
@@ -55,16 +57,19 @@ def create_category_event(manager,event,values,main_window):
             if values['-COLOR-']:
                 sub_window['-SAMPLE-'].update(background_color=values["-COLOR-"])
         if (event == 'Crear'):
-            if vl.validate_add_category(manager,values,sub_window):
-                manager.create_category(values['-NAME-'],values['-COLOR-'])
-                add_category(main_window,manager)
-                sub_window.close()
-                return
+            add_category_event(manager,values,main_window,sub_window)
+            return
         if event in ['Cancelar',sg.WIN_CLOSED]:
             sub_window.close()
             return
+        
+def add_category_event(manager,values,main_window,sub_window):
+    if vl.validate_add_category(manager,values,sub_window):
+        manager.create_category(values['-NAME-'],values['-COLOR-'])
+        add_category_leyend(main_window,manager)
+        sub_window.close()
 
-def add_category(main_window,manager):
+def add_category_leyend(main_window,manager):
     new_cat_name = manager.categories[-1].name
     new_cat_color = manager.categories[-1].color
     main_window.extend_layout(main_window["-CATS-"],[[sg.Checkbox(new_cat_name,default=True,key=f'-CAT-{new_cat_name.upper()}-',checkbox_color=new_cat_color,enable_events=True)]])
@@ -140,6 +145,7 @@ def update_total_incomes_expenses_balance(window,rows):
     window['-BALANCE-'].update(total_expenses+total_incomes)
 
 
-main()
+if __name__ == "__main__":
+    main()
 
 

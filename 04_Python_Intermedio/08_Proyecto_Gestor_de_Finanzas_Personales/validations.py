@@ -3,12 +3,12 @@ from datetime import datetime
 def validate_add_category(manager,values,window):
     if not values['-NAME-']:
         window['-NAME-'].update(background_color='pink')
-        window['-ERROR-'].update("Debe digitar un nombre para la categoría")
+        window['-ERROR-'].update('Error: Debe digitar un nombre para la categoría')
         return False
     for cat in manager.categories:
         if cat.name.lower() == values['-NAME-'].lower():
             window['-NAME-'].update(background_color='pink')
-            window['-ERROR-'].update("La categoría digitada ya existe")
+            window['-ERROR-'].update('Error: Ya existe una categoría con el mismo nombre digitado')
             return False
     return True
 
@@ -35,7 +35,6 @@ def validate_not_blanks(window,values):
         return False
     else:
         window['-ERROR-'].update("")
-            
     return True
 
 def validate_category_exists(manager,values,window):

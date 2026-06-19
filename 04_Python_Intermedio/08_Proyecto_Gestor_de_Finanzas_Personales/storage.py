@@ -1,4 +1,7 @@
 import csv
+from pathlib import Path
+
+base_directory = Path(__file__).resolve().parent
 headers = ['date','type','category','title','amount']
 
 def check_if_files_exist(manager):
@@ -19,13 +22,13 @@ def write_movements(manager):
             move_dict[attribute] = str(getattr(move_object,attribute))
         movements_list.append(move_dict)
 
-    with open("movements.csv", "w", newline="", encoding="utf-8") as file:
+    with open(base_directory/"movements.csv", "w", newline="", encoding="utf-8") as file:
         writer = csv.DictWriter(file, fieldnames=headers)
         writer.writeheader()
         writer.writerows(movements_list)
 
 def read_movements(manager):
-    with open("movements.csv", "r", encoding="utf-8") as file:
+    with open(base_directory/"movements.csv", "r", encoding="utf-8") as file:
         reader = csv.DictReader(file)
         for row in reader:
             row['amount'] = abs(float(row['amount']))
@@ -39,13 +42,13 @@ def write_categories(manager):
         cat_dict['color'] = cat_class.color
         categories_list.append(cat_dict)
 
-    with open("categories.csv", "w", newline="", encoding="utf-8") as file:
+    with open(base_directory/"categories.csv", "w", newline="", encoding="utf-8") as file:
         writer = csv.DictWriter(file, fieldnames=['name','color'])
         writer.writeheader()
         writer.writerows(categories_list)
 
 def read_categories(manager):
-    with open("categories.csv", "r", encoding="utf-8") as file:
+    with open(base_directory/"categories.csv", "r", encoding="utf-8") as file:
         reader = csv.DictReader(file)
         for row in reader:
             manager.create_category(row['name'],row['color'])
