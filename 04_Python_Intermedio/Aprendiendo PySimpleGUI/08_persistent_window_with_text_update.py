@@ -1,6 +1,6 @@
 import PySimpleGUI as sg
 
-sg.theme('Dark Blue 3')
+sg.theme('Light Blue 1')
 
 layout = [ [sg.Txt('Enter values to calculate')],
             [sg.In(size=(8,1), key='-NUMERATOR-')],
