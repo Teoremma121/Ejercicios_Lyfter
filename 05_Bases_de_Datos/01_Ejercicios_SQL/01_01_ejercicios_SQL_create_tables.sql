@@ -9,7 +9,7 @@ DROP TABLE cart_product;
 
 CREATE TABLE products (
 	id INTEGER PRIMARY KEY,
-	code CHAR(6) NOT NULL,
+	code CHAR(5) NOT NULL UNIQUE,
 	name VARCHAR(25) NOT NULL,
 	price FLOAT DEFAULT 0,
 	entry_date DATE DEFAULT CURRENT_DATE,
@@ -27,7 +27,7 @@ CREATE TABLE invoices (
 
 CREATE TABLE shopping_carts (
 	id INTEGER PRIMARY KEY,
-	buyer_email VARCHAR(25)
+	buyer_email VARCHAR(25) UNIQUE
 );
 
 CREATE TABLE invoice_product (

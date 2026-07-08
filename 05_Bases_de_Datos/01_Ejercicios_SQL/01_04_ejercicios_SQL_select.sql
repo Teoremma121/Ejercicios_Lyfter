@@ -6,7 +6,7 @@ SELECT *
 -- 2. Obtenga todos los productos que tengan un precio mayor a 50000
 SELECT *
     FROM products
-    WHERE price*456.28 >= 50000;
+    WHERE price*456.28 > 50000;
 
 -- 3. Obtenga todas las compras de un mismo producto por id.
 SELECT *

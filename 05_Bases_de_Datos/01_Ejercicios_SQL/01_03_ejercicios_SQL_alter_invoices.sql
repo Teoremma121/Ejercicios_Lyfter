@@ -5,10 +5,10 @@
 
 
 ALTER TABLE invoices
-    ADD COLUMN buyer_number VARCHAR(17);
+    ADD COLUMN buyer_number CHAR(17);
 
 ALTER TABLE invoices
-    ADD COLUMN cashier_code VARCHAR(11);
+    ADD COLUMN cashier_code CHAR(11);
 
 UPDATE invoices
     SET
