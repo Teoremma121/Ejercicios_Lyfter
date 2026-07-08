@@ -14,7 +14,7 @@ CREATE TABLE products (
 	price FLOAT DEFAULT 0,
 	entry_date DATE DEFAULT CURRENT_DATE,
 	brand VARCHAR(25),
-	stock_available BOOLEAN DEFAULT 0
+	stock_available INTEGER DEFAULT 0
 );
 
 CREATE TABLE invoices (

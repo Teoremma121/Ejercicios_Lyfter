@@ -2,16 +2,16 @@
 
 INSERT INTO products (code, name, price, brand ,entry_date, stock_available)
 	VALUES
-        ('41731', 'Heartlake International School', 99.99, 'FRIENDS', '2023-01-01', 1),
-        ('71792', 'Sora''s Transforming Mech Bike Racer', 47.99, 'NINJAGO', '2024-01-01', 1),
-        ('10316', 'The Lord of the Rings: Rivendell', 499.99, 'ICONS', '2023-03-08', 1),
-        ('75379', 'R2-D2', 99.99, 'STAR WARS', '2024-03-01', 1),
-        ('42171', 'Mercedes-AMG F1 W14 E Performance', 219.99, 'TECHNIC', '2024-03-01', 1),
-        ('76269', 'Avengers Tower', 499.99, 'MARVEL', '2023-11-24', 1),
-        ('21338', 'A-Frame Cabin', 179.99, 'IDEAS', '2023-02-04', 0),
-        ('10295', 'Porsche 911', 169.99, 'ICONS', '2021-03-01', 0),
-        ('31147', 'Retro Camera', 19.99, 'CREATOR 3-in-1', '2024-01-01', 1),
-        ('76989', 'Horizon Forbidden West: Tallneck', 89.99, 'HORIZON', '2022-05-01', 0);
+        ('41731', 'Heartlake International School', 99.99, 'FRIENDS', '2023-01-01', 38),
+        ('71792', 'Sora''s Transforming Mech Bike Racer', 47.99, 'NINJAGO', '2024-01-01', 20),
+        ('10316', 'The Lord of the Rings: Rivendell', 499.99, 'ICONS', '2023-03-08', 37),
+        ('75379', 'R2-D2', 99.99, 'STAR WARS', '2024-03-01', 15),
+        ('42171', 'Mercedes-AMG F1 W14 E Performance', 219.99, 'TECHNIC', '2024-03-01', 21),
+        ('76269', 'Avengers Tower', 499.99, 'MARVEL', '2023-11-24', 18),
+        ('21338', 'A-Frame Cabin', 179.99, 'IDEAS', '2023-02-04', 12),
+        ('10295', 'Porsche 911', 169.99, 'ICONS', '2021-03-01', 16),
+        ('31147', 'Retro Camera', 19.99, 'CREATOR 3-in-1', '2024-01-01', 32),
+        ('76989', 'Horizon Forbidden West: Tallneck', 89.99, 'HORIZON', '2022-05-01', 28);
 
 INSERT INTO invoices (invoice_number, purchase_date, buyer_email)
         VALUES
