@@ -10,7 +10,7 @@ DROP TABLE cart_product;
 CREATE TABLE products (
 	id INTEGER PRIMARY KEY,
 	code CHAR(5) NOT NULL UNIQUE,
-	name VARCHAR(25) NOT NULL,
+	name VARCHAR(50) NOT NULL,
 	price FLOAT DEFAULT 0,
 	entry_date DATE DEFAULT CURRENT_DATE,
 	brand VARCHAR(25),
@@ -19,15 +19,15 @@ CREATE TABLE products (
 
 CREATE TABLE invoices (
 	id INTEGER PRIMARY KEY,
-	invoice_number INTEGER NOT NULL,
+	invoice_number CHAR(15) NOT NULL,
 	purchase_date DATE DEFAULT CURRENT_DATE,
-	buyer_email VARCHAR(25),
+	buyer_email VARCHAR(50),
 	total_amount INTEGER DEFAULT 0
 );
 
 CREATE TABLE shopping_carts (
 	id INTEGER PRIMARY KEY,
-	buyer_email VARCHAR(25) UNIQUE
+	buyer_email VARCHAR(50) UNIQUE
 );
 
 CREATE TABLE invoice_product (
