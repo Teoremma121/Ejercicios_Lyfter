@@ -1,0 +1,23 @@
+1. Explicación cruzada entre conjuntos y SQL
+Analice la operación de conjuntos All - Odd
+Explique cómo una operación similar se puede representar en SQL con JOINs.
+¿Qué tipo de JOIN usaría?
+
+El resultado de All - Odd teóricamente corresponde al conjunto de todo
+aquello que forma parte de All pero no está contenido en Odd. Es decir
+el complemento de Odd.
+
+En SQL, para una base de datos, la analogía es que se desea obtener
+como resultado de la consulta todos aquellos registros contenidos en
+una tabla universal pero que no forman parte de otra tabla que solo
+hace referencia a una fracción de los registros de la tabla universal
+
+La forma de ejecutar una consulta de ese tipo es mediante un LEFT o RIGHT
+JOIN y agregando el filtro WHERE para tener los registros con valores nulos.
+Es decir, aquellos registros sin coincidencias. Por ejemplo:
+
+SELECT *
+FROM Tabla_Universal AS All_Tab
+LEFT JOIN Tabla_A AS A 
+ON All_Tab.id = A.id
+WHERE A.id IS NULL;
