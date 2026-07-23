@@ -13,7 +13,7 @@ SELECT
     FROM books
     LEFT JOIN authors
     ON books.author = authors.ID
-    WHERE authors.name IS NULL;
+    WHERE books.author IS NULL;
 
 -- Obtenga todos los autores que no tienen libros
 SELECT 
@@ -25,9 +25,7 @@ SELECT
 
 -- Obtenga todos los libros que han sido rentados en algún momento
 SELECT
-    rents.ID as RentID,
-    books.name as Book,
-    rents.state as State
+    DISTINCT books.name as Book
     FROM books
     INNER JOIN rents
     ON books.ID = rents.bookID;
