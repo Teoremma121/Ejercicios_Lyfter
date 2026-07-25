@@ -57,20 +57,12 @@ BEGIN
 	UPDATE bills
 	SET total_amount = v_total_amount
 	WHERE id = v_bill_id;
-
-    -- 5. Comprobación definitiva del stock
-    SELECT stock INTO v_available_stock
-    FROM products
-    WHERE id = v_product_id;
-
-    IF v_available_stock < v_quantity THEN
-      RAISE EXCEPTION 'El producto está agotado';
-    END IF;
 	
-    -- 6. Reducir el stock del producto
+    -- 5. Reducir el stock (Con bloqueo si el stock cambió en el proceso)
     UPDATE products
     SET stock = stock - v_quantity
-    WHERE id = v_product_id;
+    WHERE id = v_product_id 
+	AND stock = v_available_stock;
 
 	RAISE NOTICE 'Compra finalizada.';
 END $$;
