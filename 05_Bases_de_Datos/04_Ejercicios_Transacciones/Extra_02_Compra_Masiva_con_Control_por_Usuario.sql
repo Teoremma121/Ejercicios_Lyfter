@@ -9,7 +9,9 @@ DECLARE
 	v_product_01_quantity INTEGER := 1;
 	v_product_02_quantity INTEGER := 2;
 	v_product_03_quantity INTEGER := 3;
-	v_product_price REAL;
+	v_product_01_price REAL;
+	v_product_02_price REAL;
+	v_product_03_price REAL;
 	v_available_stock INTEGER;
 	v_buyer VARCHAR(50) := 'kuromi_goth_vibes';
 	v_user_id INTEGER;
@@ -18,7 +20,7 @@ DECLARE
 	v_invoice_number VARCHAR(15) := 'INV-202607-1007';
 
 BEGIN
-	-- 1. Crear la factura
+	-- 1. Crear la factura:
 	SELECT id INTO v_user_id
 	FROM users
 	WHERE username = v_buyer;
@@ -34,8 +36,8 @@ BEGIN
 	FROM bills
 	WHERE invoice_number = v_invoice_number;
 	
-	-- 2.1. Primer Producto:
-    -- 2.1.1. Verificación de existencias:
+    -- 2. Verificación de existencias:
+	-- 2.1 Primer Producto:
     SELECT stock INTO v_available_stock
     FROM products
     WHERE id = v_product_01_id;
@@ -44,22 +46,11 @@ BEGIN
       RAISE EXCEPTION 'No hay suficientes unidades del producto en el inventario';
     END IF;
 
-	SELECT price INTO v_product_price
+	SELECT price INTO v_product_01_price
     FROM products
     WHERE id = v_product_01_id;
 
-	-- 2.1.2. Insertar detalle en la factura:
-	INSERT INTO "bill-product" (bill_id, product_id, quantity, amount)
-	VALUES 
-	(v_bill_id, v_product_01_id, v_product_01_quantity, v_product_price*v_product_01_quantity);
-
-    -- 2.1.3 Reducir el stock del producto:
-    UPDATE products
-    SET stock = stock - v_product_01_quantity
-    WHERE id = v_product_01_id;
-
-	-- 2.2. Segundo Producto:
-    -- 2.2.1. Verificación de existencias:
+	-- 2.2 Segundo Producto:
     SELECT stock INTO v_available_stock
     FROM products
     WHERE id = v_product_02_id;
@@ -68,23 +59,12 @@ BEGIN
       RAISE EXCEPTION 'No hay suficientes unidades del producto en el inventario';
     END IF;
 
-	SELECT price INTO v_product_price
+	SELECT price INTO v_product_02_price
     FROM products
     WHERE id = v_product_02_id;
 
-	-- 2.2.2. Insertar detalle en la factura:
-	INSERT INTO "bill-product" (bill_id, product_id, quantity, amount)
-	VALUES 
-	(v_bill_id, v_product_02_id, v_product_02_quantity, v_product_price*v_product_02_quantity);
-
-    -- 2.2.3 Reducir el stock del producto:
-    UPDATE products
-    SET stock = stock - v_product_02_quantity
-    WHERE id = v_product_02_id;
-
-	-- 2.3. Tercer Producto:
-    -- 2.3.1. Verificación de existencias:
-    SELECT stock INTO v_available_stock
+	-- 2.3 Tercer Producto:
+	SELECT stock INTO v_available_stock
     FROM products
     WHERE id = v_product_03_id;
 
@@ -92,21 +72,31 @@ BEGIN
       RAISE EXCEPTION 'No hay suficientes unidades del producto en el inventario';
     END IF;
 
-	SELECT price INTO v_product_price
+	SELECT price INTO v_product_03_price
     FROM products
     WHERE id = v_product_03_id;
 
-	-- 2.3.2. Insertar detalle en la factura:
+	-- 3. Insertar los detalles:
 	INSERT INTO "bill-product" (bill_id, product_id, quantity, amount)
 	VALUES 
-	(v_bill_id, v_product_03_id, v_product_03_quantity, v_product_price*v_product_03_quantity);
+	(v_bill_id, v_product_01_id, v_product_01_quantity, v_product_01_price*v_product_01_quantity),
+	(v_bill_id, v_product_02_id, v_product_02_quantity, v_product_02_price*v_product_02_quantity),
+	(v_bill_id, v_product_03_id, v_product_03_quantity, v_product_03_price*v_product_03_quantity);
+	
+	-- 4. Reducir el stock:
+    UPDATE products
+    SET stock = stock - v_product_01_quantity
+    WHERE id = v_product_01_id;
 
-    -- 2.3.3 Reducir el stock del producto:
+    UPDATE products
+    SET stock = stock - v_product_02_quantity
+    WHERE id = v_product_02_id;
+
     UPDATE products
     SET stock = stock - v_product_03_quantity
     WHERE id = v_product_03_id;
 
-	-- 3. Terminar la factura
+	-- 5. Terminar la factura
 	SELECT SUM(amount) INTO v_total_amount
 	FROM "bill-product"
 	WHERE bill_id = v_bill_id
